@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Innofit</string>
+
+    <!-- FOR LANDING-->
+    <string name="landing_tagline">InnoFit will help you find your instructor and help you build your physique to look aethetically pleasing.</string>
+    <string name="landing_title">InnoFit</string>
+    <string name="landing_loginbtn">Login</string>
+    <string name="landing_signupbtn">Signup</string>
+    <string name="landing_otherbtn">How we work?</string>
+
+</resources>

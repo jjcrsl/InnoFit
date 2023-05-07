@@ -3,6 +3,9 @@
     <style name="Base.Theme.Innofit" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">@color/prominent</item>
+        <item name="colorSecondary">@color/prominent2</item>
     </style>
 
     <style name="Theme.Innofit" parent="Base.Theme.Innofit" />

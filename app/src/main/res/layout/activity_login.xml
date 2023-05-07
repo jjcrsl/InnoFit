@@ -115,10 +115,24 @@
             </RelativeLayout>
 
             <Button
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Login_login"
                 android:background="@color/prominent"
+                android:text="@string/Login_login"
+                android:fontFamily="@font/blinker_semibold"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#00000000"
+                android:fontFamily="@font/blinker_semibold"
+                android:onClick="callSignUpFromLogin"
+                android:text="Create Account"
+                android:textColor="@color/black"
+                android:layout_gravity="center"/>
         </LinearLayout>
     </LinearLayout>
 

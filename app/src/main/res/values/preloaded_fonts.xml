@@ -3,6 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/blinker</item>
         <item>@font/blinker_bold</item>
+        <item>@font/blinker_extrabold</item>
         <item>@font/blinker_semibold</item>
     </array>
 </resources>

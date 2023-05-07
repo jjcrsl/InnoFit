@@ -85,7 +85,6 @@
                 android:id="@+id/forget_password_block"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/login_password"
                 android:layout_marginTop="10dp">
 
 
@@ -106,14 +105,20 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:padding="1dp"
                     android:background="#00000000"
                     android:onClick="callForgetPassword"
                     android:textColor="@color/black"
                     android:fontFamily="@font/blinker"
                     android:text="@string/Login_forgetpassword" />
 
-
             </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Login_login"
+                android:background="@color/prominent"
         </LinearLayout>
     </LinearLayout>
 

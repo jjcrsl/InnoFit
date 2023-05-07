@@ -8,4 +8,11 @@
     <string name="landing_signupbtn">Signup</string>
     <string name="landing_otherbtn">How we work?</string>
 
+    <!-- FOR LANDING-->
+    <string name="Login_login">Login</string>
+    <string name="Login_usernametxt">Enter Username</string>
+    <string name="Login_passwordtxt">Enter Password</string>
+    <string name="Login_forgetpassword">Forget Password</string>
+    <string name="Login_rmbrme">Remember Me</string>
+
 </resources>

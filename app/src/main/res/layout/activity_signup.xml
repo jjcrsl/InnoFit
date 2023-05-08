@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/blinker_extrabold"
-            android:text="@string/Login_login"
+            android:text="@string/Signup_signup"
             android:textColor="@color/prominent"
             android:textSize="40sp" />
 
@@ -47,7 +47,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:textColorHint="@color/black"
                 app:boxStrokeWidthFocused="2dp"
-                app:startIconDrawable="@drawable/baseline_account_box_24"
+                app:startIconDrawable="@drawable/baseline_abc_24"
                 app:startIconTint="@color/prominent"
                 >
 
@@ -55,7 +55,47 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-                    android:hint="@string/Login_usernametxt"
+                    android:hint="@string/Signup_fullname"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="@color/black"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/baseline_account_box_24"
+                app:startIconTint="@color/prominent"
+                android:layout_marginTop="5dp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/blinker"
+                    android:hint="@string/Signup_username"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="@color/black"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/baseline_account_box_24"
+                app:startIconTint="@color/prominent"
+                android:layout_marginTop="5dp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/blinker"
+                    android:hint="@string/Signup_email"
 
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -69,7 +109,7 @@
                 app:startIconDrawable="@drawable/baseline_password_24"
                 app:startIconTint="@color/prominent"
                 app:endIconTint="@color/prominent"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 app:endIconMode="password_toggle"
                 android:inputType="textPassword"
 
@@ -79,43 +119,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-                    android:hint="@string/Login_passwordtxt"
+                    android:hint="@string/Signup_password"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            <RelativeLayout
-                android:id="@+id/forget_password_block"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="@color/black"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/baseline_password_24"
+                app:startIconTint="@color/prominent"
+                app:endIconTint="@color/prominent"
+                android:layout_marginTop="5dp"
+                app:endIconMode="password_toggle"
+                android:inputType="textPassword"
 
+                >
 
-                <CheckBox
-                    android:id="@+id/remember_me"
-                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:buttonTint="@color/black"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-                    android:text="@string/Login_rmbrme"
-                    android:textColor="@color/black" />
-
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:padding="1dp"
-                    android:background="#00000000"
-                    android:onClick="callForgetPassword"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/blinker"
-                    android:text="@string/Login_forgetpassword" />
-
-            </RelativeLayout>
+                    android:hint="@string/Signup_password"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
 
@@ -125,11 +154,11 @@
                 android:layout_marginTop="20dp"
                 android:background="@color/prominent"
                 android:fontFamily="@font/blinker_semibold"
-                android:text="@string/Login_login"
+                android:text="@string/Signup_signup"
                 android:textColor="@color/white" />
 
             <Button
-                android:id="@+id/create_btn"
+                android:id="@+id/loginn_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -137,7 +166,7 @@
                 android:background="#00000000"
                 android:fontFamily="@font/blinker_semibold"
                 android:onClick="callSignUpFromLogin"
-                android:text="Create Account"
+                android:text="LOGIN"
                 android:textColor="@color/black" />
         </LinearLayout>
     </LinearLayout>

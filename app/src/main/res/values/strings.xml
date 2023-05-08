@@ -8,11 +8,16 @@
     <string name="landing_signupbtn">Signup</string>
     <string name="landing_otherbtn">How we work?</string>
 
-    <!-- FOR LOGIN-->
+    <!-- FOR LOGIN & SIGNUP-->
     <string name="Login_login">Login</string>
     <string name="Login_usernametxt">Enter Username</string>
     <string name="Login_passwordtxt">Enter Password</string>
-    <string name="Login_forgetpassword">Forgot Password</string>
+    <string name="Login_forgetpassword">Forg  ot Password</string>
     <string name="Login_rmbrme">Remember Me</string>
+    <string name="Signup_fullname">Full Name</string>
+    <string name="Signup_username">Username</string>
+    <string name="Signup_email">Email</string>
+    <string name="Signup_password">Password</string>
+    <string name="Signup_cpassword">Confirm Password</string>
 
 </resources>

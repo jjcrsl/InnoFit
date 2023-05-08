@@ -21,15 +21,14 @@
             android:id="@+id/login_back_button"
             android:layout_width="24dp"
             android:layout_height="match_parent"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="50dp"
             android:padding="1dp"
             android:src="@drawable/back" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/blinker_extrabold"
             android:text="@string/Login_login"
             android:textColor="@color/prominent"

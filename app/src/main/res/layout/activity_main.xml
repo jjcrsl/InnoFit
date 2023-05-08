@@ -48,7 +48,8 @@
 
 
             <Button
-                android:id="@+id/loginbtn"
+                android:id="@+id/login_btn"
+                android:onClick="callLoginSCreen"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -58,10 +59,10 @@
                 android:text="@string/landing_loginbtn"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                tools:ignore="ButtonStyle,RtlHardcoded,VisualLintButtonSize" />
+                android:transitionName="transition_login" />
 
             <Button
-                android:id="@+id/signupbtn"
+                android:id="@+id/signup_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -74,19 +75,6 @@
                 tools:ignore="ButtonStyle,RtlHardcoded,VisualLintButtonSize" />
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/morebtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:fontFamily="@font/blinker_semibold"
-            android:text="@string/landing_otherbtn"
-            android:textColor="@color/prominent"
-            android:textSize="18sp"
-            tools:ignore="InefficientWeight,VisualLintButtonSize" />
 
     </LinearLayout>
 

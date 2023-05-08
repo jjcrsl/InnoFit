@@ -19,10 +19,10 @@
 
         <ImageView
             android:id="@+id/login_back_button"
-            android:layout_width="24dp"
+            android:layout_width="35dp"
             android:layout_height="match_parent"
-            android:layout_marginBottom="60dp"
             android:padding="1dp"
+            android:layout_marginBottom="60dp"
             android:src="@drawable/back" />
 
         <TextView
@@ -53,12 +53,12 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailtxt"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-                    android:hint="@string/Login_usernametxt"
 
-                    />
+                    android:hint="@string/Login_usernametxt" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -77,11 +77,11 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordtxt"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:fontFamily="@font/blinker"
-                    android:hint="@string/Login_passwordtxt"
-                    />
+                    android:hint="@string/Login_passwordtxt" />
             </com.google.android.material.textfield.TextInputLayout>
 
 

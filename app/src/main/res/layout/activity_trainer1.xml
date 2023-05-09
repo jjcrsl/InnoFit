@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AC1929"
+    tools:context=".Trainer1">
+
+
+    <ImageView
+        android:id="@+id/prog1"
+        android:layout_width="600dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/strbanner" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="600dp"
+        android:layout_height="7dp"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484" />
+
+        <View
+                android:id="@+id/divider2"
+                android:layout_width="600dp"
+                android:layout_height="7dp"
+                android:layout_gravity="center"
+                android:background="@color/black"
+                android:backgroundTint="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/prog1"
+                app:layout_constraintVertical_bias="0.056" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="41dp"
+        android:fontFamily="@font/blinker"
+        android:text="Trainer: ROMY"
+        android:textColor="#F6F4F4"
+        android:textColorHint="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <TextView
+        android:id="@+id/details1"
+        android:layout_width="133dp"
+        android:layout_height="31dp"
+        android:fontFamily="@font/blinker"
+        android:text="See details"
+        android:textColor="#F6F4F4"
+        android:textColorHint="#FFFFFF"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.773" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="561dp"
+        android:layout_height="122dp"
+        android:fontFamily="@font/blinker"
+        android:text="This program involves the performance of physical exercises that are designed to improve strength and endurance."
+        android:textColor="#F6F4F4"
+        android:textColorHint="#FFFFFF"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678" />
+
+    <Button
+        android:id="@+id/avail1"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/blinker_bold"
+        android:text="AVAIL THIS PROGRAM"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

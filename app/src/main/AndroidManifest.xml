@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Innofit"
         tools:targetApi="31">
         <activity
+            android:name=".Trainer4"
+            android:exported="false" />
+        <activity
+            android:name=".Trainer3"
+            android:exported="false" />
+        <activity
+            android:name=".Trainer2"
+            android:exported="false" />
+        <activity
+            android:name=".Trainer1"
+            android:exported="false" />
+        <activity
             android:name=".Others"
             android:exported="false" />
         <activity
@@ -49,7 +61,6 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
 
 </manifest>

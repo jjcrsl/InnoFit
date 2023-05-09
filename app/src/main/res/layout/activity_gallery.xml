@@ -32,9 +32,9 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-black"
-                android:text="GALLERY"
+                android:text="FITNESS EQUIPMENT"
                 android:textColor="#000000"
-                android:textSize="48sp" />
+                android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/tegpress"

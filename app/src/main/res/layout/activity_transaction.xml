@@ -5,8 +5,128 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
+    android:background="@drawable/absbg"
     tools:context=".MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="FITNESS EQUIPMENT"
+                android:background="@color/prominent"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+
+
+            <ImageView
+                android:id="@+id/lpress"
+                android:layout_width="317dp"
+                android:layout_height="358dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/trainer1" />
+
+            <TextView
+                android:id="@+id/barbells"
+                android:layout_width="138dp"
+                android:layout_height="58dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="90dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Barbells"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:id="@+id/bbell"
+                android:layout_width="317dp"
+                android:layout_height="330dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/barbell" />
+
+            <TextView
+                android:id="@+id/treadmills"
+                android:layout_width="258dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="70dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:text="Treadmills"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:id="@+id/tdmill"
+                android:layout_width="317dp"
+                android:layout_height="330dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/treadmill" />
+
+            <!--TO BE FINISHED-->
+
+            <TextView
+                android:id="@+id/dumbell"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:text="Dumbbells"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:id="@+id/dbbell"
+                android:layout_width="317dp"
+                android:layout_height="330dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/dumbbells" />
+
+            <TextView
+                android:id="@+id/benchpress"
+                android:layout_width="221dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="70dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:text="Bench Press"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:id="@+id/bpress"
+                android:layout_width="317dp"
+                android:layout_height="330dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/benchpress" />
+
+
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -57,4 +177,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

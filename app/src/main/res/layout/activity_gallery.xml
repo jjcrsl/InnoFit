@@ -8,71 +8,20 @@
     android:background="@drawable/absbg"
     tools:context=".MainActivity">
 
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:background="#652F2F"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <ImageButton
-            android:id="@+id/discs"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            app:srcCompat="@drawable/home" />
-
-        <ImageButton
-            android:id="@+id/gallerys"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            app:srcCompat="@drawable/gallery" />
-
-        <ImageButton
-            android:id="@+id/transac"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            app:srcCompat="@drawable/order" />
-
-        <ImageButton
-            android:id="@+id/others"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            app:srcCompat="@drawable/abouts" />
-
-    </LinearLayout>
-
-
-    <ScrollView
-        android:layout_width="414dp"
-        android:layout_height="680dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:orientation="vertical">
 
 
@@ -120,22 +69,19 @@
                 android:id="@+id/bbell"
                 android:layout_width="317dp"
                 android:layout_height="330dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+               android:layout_gravity="center"
                 app:srcCompat="@drawable/barbell" />
 
             <TextView
                 android:id="@+id/treadmills"
                 android:layout_width="258dp"
                 android:layout_height="44dp"
-                android:layout_gravity="center"
                 android:layout_marginTop="70dp"
+                android:layout_gravity="center"
                 android:fontFamily="sans-serif-black"
                 android:text="Treadmills"
                 android:textAlignment="center"
                 android:textSize="34sp" />
-
-            <!--TO BE FINISHED-->
 
             <ImageView
                 android:id="@+id/tdmill"
@@ -145,12 +91,14 @@
                 android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/treadmill" />
 
+            <!--TO BE FINISHED-->
+
             <TextView
                 android:id="@+id/dumbell"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_gravity="center"
                 android:layout_marginTop="70dp"
+                android:layout_gravity="center"
                 android:fontFamily="sans-serif-black"
                 android:text="Dumbbells"
                 android:textAlignment="center"
@@ -168,8 +116,8 @@
                 android:id="@+id/benchpress"
                 android:layout_width="221dp"
                 android:layout_height="62dp"
-                android:layout_gravity="center"
                 android:layout_marginTop="70dp"
+                android:layout_gravity="center"
                 android:fontFamily="sans-serif-black"
                 android:text="Bench Press"
                 android:textAlignment="center"
@@ -179,13 +127,60 @@
                 android:id="@+id/bpress"
                 android:layout_width="317dp"
                 android:layout_height="330dp"
-                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:layout_gravity="center"
                 app:srcCompat="@drawable/benchpress" />
 
 
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#652F2F"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageButton
+            android:id="@+id/discs"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@color/prominent"
+            app:srcCompat="@drawable/baseline_home_24" />
+
+        <ImageButton
+            android:id="@+id/gallerys"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@color/prominent"
+            app:srcCompat="@drawable/baseline_fitness_center_24" />
+
+        <ImageButton
+            android:id="@+id/transac"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@color/prominent"
+            app:srcCompat="@drawable/baseline_person_search_24" />
+
+        <ImageButton
+            android:id="@+id/others"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@color/prominent"
+            app:srcCompat="@drawable/baseline_info_24" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,7 +35,7 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ImageButton transac = (ImageButton) findViewById(R.id.transaction);
+        ImageButton transac = (ImageButton) findViewById(R.id.transac);
         transac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

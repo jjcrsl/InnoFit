@@ -7,109 +7,123 @@
     android:background="#AC1929"
     tools:context=".Trainer1">
 
-
-    <ImageView
-        android:id="@+id/prog1"
-        android:layout_width="414dp"
-        android:layout_height="348dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/strbanner" />
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="411dp"
-        android:layout_height="9dp"
-        android:layout_gravity="center"
-        android:background="@color/black"
-        android:backgroundTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.391" />
-
-    <View
-        android:id="@+id/divider3"
-        android:layout_width="411dp"
-        android:layout_height="9dp"
-        android:layout_gravity="center"
-        android:background="@color/black"
-        android:backgroundTint="#000000"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.013">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="255dp"
-        android:layout_height="56dp"
-        android:fontFamily="@font/blinker"
-        android:text="Trainer: ROMY"
-        android:textColor="#F6F4F4"
-        android:textColorHint="#FFFFFF"
-        android:textSize="30sp"
+        <ImageView
+            android:id="@+id/backbtn1"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:padding="1dp"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/prog1"
+            android:layout_width="463dp"
+            android:layout_height="289dp"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/strbanner" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.0">
 
-    <TextView
-        android:id="@+id/details1"
-        android:layout_width="94dp"
-        android:layout_height="24dp"
-        android:fontFamily="@font/blinker"
-        android:text="See details"
-        android:textColor="#F6F4F4"
-        android:textColorHint="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.713" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/blinker_bold"
+            android:text="Trainer: ROMY"
+            android:textColor="#F6F4F4"
+            android:textColorHint="#FFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.415" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="367dp"
-        android:layout_height="108dp"
-        android:fontFamily="@font/blinker"
-        android:text="Strength training or resistance training involves the performance of physical exercises that are designed to improve strength and endurance."
-        android:textColor="#F6F4F4"
-        android:textColorHint="#FFFFFF"
-        android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.363"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="369dp"
+            android:layout_height="129dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/blinker"
+            android:text="This program involves the performance of physical exercises that are designed to improve strength and endurance."
+            android:textColor="#F6F4F4"
+            android:textColorHint="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.363"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.542" />
+
+        <TextView
+            android:id="@+id/details1"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:fontFamily="@font/blinker"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="See details"
+            android:textColor="#001DDC"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.949"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.732" />
 
     <Button
         android:id="@+id/trainer1btn"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
-        android:backgroundTint="#000000"
+        android:backgroundTint="#FFFCFC"
         android:fontFamily="@font/blinker_bold"
         android:text="AVAIL THIS PROGRAM"
+        android:textColor="#F44336"
         android:textSize="20sp"
+        android:layout_marginTop="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.805" />
+        app:layout_constraintVertical_bias="0.836" />
 
-
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

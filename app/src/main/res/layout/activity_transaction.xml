@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,98 +31,89 @@
                 android:layout_height="54dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-black"
-                android:text="FITNESS EQUIPMENT"
                 android:background="@color/prominent"
+                android:fontFamily="@font/blinker_bold"
+                android:text="HIRE YOUR TRAINER"
                 android:textColor="@color/white"
                 android:textSize="35sp" />
 
 
-
             <ImageView
-                android:id="@+id/lpress"
+                android:id="@+id/trainer1png"
                 android:layout_width="317dp"
                 android:layout_height="358dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 app:srcCompat="@drawable/trainer1" />
 
-            <TextView
-                android:id="@+id/barbells"
-                android:layout_width="138dp"
-                android:layout_height="58dp"
+
+            <Button
+                android:id="@+id/trainer1btn"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:text="Hire TRAINER ROMY"
                 android:layout_gravity="center"
-                android:layout_marginTop="90dp"
-                android:fontFamily="sans-serif-black"
-                android:text="Barbells"
-                android:textAlignment="center"
-                android:textSize="34sp" />
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/blinker_bold"
+                android:textSize="20sp"/>
+
 
             <ImageView
-                android:id="@+id/bbell"
+                android:id="@+id/trainer2png"
                 android:layout_width="317dp"
                 android:layout_height="330dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/barbell" />
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/trainer2" />
 
-            <TextView
-                android:id="@+id/treadmills"
-                android:layout_width="258dp"
-                android:layout_height="44dp"
-                android:layout_marginTop="70dp"
+            <Button
+                android:id="@+id/trainer2btn"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:text="HIRE TRAINER LISA"
                 android:layout_gravity="center"
-                android:fontFamily="sans-serif-black"
-                android:text="Treadmills"
-                android:textAlignment="center"
-                android:textSize="34sp" />
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/blinker_bold"
+                android:textSize="20sp"/>
+
 
             <ImageView
-                android:id="@+id/tdmill"
+                android:id="@+id/trainer3png"
                 android:layout_width="317dp"
                 android:layout_height="330dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/treadmill" />
+                app:srcCompat="@drawable/trainer3" />
 
-            <!--TO BE FINISHED-->
-
-            <TextView
-                android:id="@+id/dumbell"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginTop="70dp"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif-black"
-                android:text="Dumbbells"
-                android:textAlignment="center"
-                android:textSize="34sp" />
-
-            <ImageView
-                android:id="@+id/dbbell"
-                android:layout_width="317dp"
-                android:layout_height="330dp"
+            <Button
+                android:id="@+id/trainer3btn"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:text="HIRE TRAINER JOHN"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/dumbbells" />
+                android:fontFamily="@font/blinker_bold"
+                android:textSize="20sp"/>
 
-            <TextView
-                android:id="@+id/benchpress"
-                android:layout_width="221dp"
-                android:layout_height="62dp"
-                android:layout_marginTop="70dp"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif-black"
-                android:text="Bench Press"
-                android:textAlignment="center"
-                android:textSize="34sp" />
 
             <ImageView
                 android:id="@+id/bpress"
                 android:layout_width="317dp"
                 android:layout_height="330dp"
-                android:layout_marginTop="10dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/benchpress" />
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/trainer4"/>
+
+            <Button
+                android:id="@+id/trainer4btn"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:text="HIRE TRAINER MARK"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="90dp"
+                android:fontFamily="@font/blinker_bold"
+                android:textSize="20sp"/>
 
 
         </LinearLayout>

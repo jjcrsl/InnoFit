@@ -22,7 +22,7 @@
     <View
         android:id="@+id/divider"
         android:layout_width="600dp"
-        android:layout_height="7dp"
+        android:layout_height="8dp"
         android:layout_gravity="center"
         android:background="@color/black"
         android:backgroundTint="#000000"

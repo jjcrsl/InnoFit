@@ -10,19 +10,33 @@
 
     <ImageView
         android:id="@+id/prog1"
-        android:layout_width="600dp"
-        android:layout_height="550dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="414dp"
+        android:layout_height="348dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/strbanner" />
 
     <View
         android:id="@+id/divider"
-        android:layout_width="600dp"
-        android:layout_height="8dp"
+        android:layout_width="411dp"
+        android:layout_height="9dp"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.391" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="411dp"
+        android:layout_height="9dp"
         android:layout_gravity="center"
         android:background="@color/black"
         android:backgroundTint="#000000"
@@ -31,72 +45,58 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484" />
-
-        <View
-                android:id="@+id/divider2"
-                android:layout_width="600dp"
-                android:layout_height="7dp"
-                android:layout_gravity="center"
-                android:background="@color/black"
-                android:backgroundTint="#000000"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/prog1"
-                app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="250dp"
-        android:layout_height="41dp"
+        android:layout_width="255dp"
+        android:layout_height="56dp"
         android:fontFamily="@font/blinker"
         android:text="Trainer: ROMY"
         android:textColor="#F6F4F4"
         android:textColorHint="#FFFFFF"
-        android:textSize="40sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.523" />
+        app:layout_constraintVertical_bias="0.436" />
 
     <TextView
         android:id="@+id/details1"
-        android:layout_width="133dp"
-        android:layout_height="31dp"
+        android:layout_width="94dp"
+        android:layout_height="24dp"
         android:fontFamily="@font/blinker"
         android:text="See details"
         android:textColor="#F6F4F4"
         android:textColorHint="#FFFFFF"
-        android:textSize="27sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.773" />
+        app:layout_constraintVertical_bias="0.713" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="561dp"
-        android:layout_height="122dp"
+        android:layout_width="367dp"
+        android:layout_height="108dp"
         android:fontFamily="@font/blinker"
-        android:text="This program involves the performance of physical exercises that are designed to improve strength and endurance."
+        android:text="Strength training or resistance training involves the performance of physical exercises that are designed to improve strength and endurance."
         android:textColor="#F6F4F4"
         android:textColorHint="#FFFFFF"
-        android:textSize="32sp"
+        android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.678" />
+        app:layout_constraintVertical_bias="0.542" />
 
     <Button
-        android:id="@+id/avail1"
+        android:id="@+id/trainer1btn"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
@@ -106,13 +106,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.805" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-

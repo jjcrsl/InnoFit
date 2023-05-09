@@ -27,33 +27,6 @@ public class Transaction extends AppCompatActivity {
 
             }
         });
-        trainer2 = (Button) findViewById(R.id.trainer2btn);
-        trainer2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Transaction.this, Trainer2.class);
-                startActivity(intent);
-
-            }
-        });
-        trainer3 = (Button) findViewById(R.id.trainer3btn);
-        trainer3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Transaction.this, Trainer3.class);
-                startActivity(intent);
-
-            }
-        });
-        trainer4 = (Button) findViewById(R.id.trainer4btn);
-        trainer1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Transaction.this, Trainer4.class);
-                startActivity(intent);
-
-            }
-        });
 
         ImageButton disc = (ImageButton) findViewById(R.id.discs);
 

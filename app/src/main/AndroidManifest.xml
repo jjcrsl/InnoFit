@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Innofit"
         tools:targetApi="31">
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".Trainer4"
             android:exported="false" />
         <activity

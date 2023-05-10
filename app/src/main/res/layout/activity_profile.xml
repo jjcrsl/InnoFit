@@ -26,7 +26,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/profile_icon"/>
+                android:src="@drawable/profile_icon" />
 
             <TextView
                 android:id="@+id/fullname"
@@ -151,13 +151,17 @@
                 android:textColorHint="@color/black"
                 app:boxStrokeWidthFocused="2dp"
                 app:startIconDrawable="@drawable/baseline_abc_24"
-                app:startIconTint="@color/prominent">
+                app:startIconTint="@color/prominent"
+                android:longClickable="false"
+                android:clickable="false">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/nameget"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
+                    android:longClickable="false"
+                    android:clickable="false"
                     android:hint="@string/Signup_fullname" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -169,14 +173,18 @@
                 android:textColorHint="@color/black"
                 app:boxStrokeWidthFocused="2dp"
                 app:startIconDrawable="@drawable/baseline_account_box_24"
-                app:startIconTint="@color/prominent">
+                app:startIconTint="@color/prominent"
+                android:longClickable="false"
+                android:clickable="false">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/userget"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-                    android:hint="@string/Signup_username" />
+                    android:hint="@string/Signup_username"
+                    android:longClickable="false"
+                    android:clickable="false"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -187,14 +195,18 @@
                 android:textColorHint="@color/black"
                 app:boxStrokeWidthFocused="2dp"
                 app:startIconDrawable="@drawable/baseline_email_24"
-                app:startIconTint="@color/prominent">
+                app:startIconTint="@color/prominent"
+                android:longClickable="false"
+                android:clickable="false">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/emailget"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-                    android:hint="@string/Signup_email" />
+                    android:hint="@string/Signup_email"
+                    android:longClickable="false"
+                    android:clickable="false"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -209,6 +221,8 @@
                 app:endIconTint="@color/prominent"
                 app:startIconDrawable="@drawable/baseline_password_24"
                 app:startIconTint="@color/prominent"
+                android:longClickable="false"
+                android:clickable="false"
 
                 >
 
@@ -217,15 +231,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-                    android:hint="@string/Signup_password" />
+                    android:hint="@string/Signup_password"
+                    android:longClickable="false"
+                    android:clickable="false"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
 
-                android:id="@+id/signup_btn"
+                android:id="@+id/signout_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/prominent"
                 android:fontFamily="@font/blinker_semibold"
                 android:text="@string/Signup_signup"

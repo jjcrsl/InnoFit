@@ -51,8 +51,14 @@ public class Signup extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+            }
+        });
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Authentication();
-                rdatabase();
                 }
         });
 
@@ -67,22 +73,6 @@ public class Signup extends AppCompatActivity {
 
     }
 
-    private void rdatabase() {
-        rootNode = FirebaseDatabase.getInstance();
-        reference = rootNode.getReference("users");
-
-        //get all the values
-
-        String names = nametxt.getText().toString();
-        String users = usertxt.getText().toString();
-        String emails = emailtxt.getText().toString();
-        String passwords = passtxt.getText().toString();
-
-        UsersHelperClass helperClass= new UsersHelperClass(names, users, emails, passwords);
-
-        reference.child(names).setValue(helperClass);
-    }
-
 
     public void gotoLogin(){
         Intent intent = new Intent(this, Login.class);
@@ -90,14 +80,18 @@ public class Signup extends AppCompatActivity {
     }
 
     public void Authentication(){
+        rootNode = FirebaseDatabase.getInstance();
+        reference = rootNode.getReference("user");
+
+        //get all the values
+
+
 
         String email= emailtxt.getText().toString();
         String password= passtxt.getText().toString();
         String conpassword= cpasstxt.getText().toString();
         String name= nametxt.getText().toString();
         String user= usertxt.getText().toString();
-
-
 
         if (!email.matches(emailPattern)){
             emailtxt.setError("Enter a proper Email Address");
@@ -116,6 +110,16 @@ public class Signup extends AppCompatActivity {
             cpasstxt.setError("Password did not match");
         }
         else {
+
+            String names = nametxt.getText().toString();
+            String users = usertxt.getText().toString();
+            String emails = emailtxt.getText().toString();
+            String passwords = passtxt.getText().toString();
+
+            UsersHelperClass helperClass= new UsersHelperClass(names, users, emails, passwords);
+
+            reference.setValue(helperClass);
+
                 progressDialog.setMessage("Signing up");
                 progressDialog.setTitle("Sign up");
                 progressDialog.setCanceledOnTouchOutside(false);

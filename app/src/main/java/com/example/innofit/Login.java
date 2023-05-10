@@ -19,13 +19,20 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
     private ImageView image;
     private Button button, login;
+    EditText names, users, emails, passwords;
 
 
-    EditText emailtxt, passwordtxt;
+    EditText nametxt, usertxt, emailtxt, passtxt, passwordtxt;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     FirebaseAuth mAuth;
     FirebaseUser mUser;
@@ -86,6 +93,8 @@ public class Login extends AppCompatActivity {
             progressDialog.setCanceledOnTouchOutside(false);
             progressDialog.show();
 
+
+
             mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -98,15 +107,60 @@ public class Login extends AppCompatActivity {
                     else{
                         progressDialog.dismiss();
                         Toast.makeText(Login.this, ""+task.getException(), Toast.LENGTH_SHORT).show();
+                        storedatas();
                     }
                 }
             });
         }
     }
 
+    private void storedatas() {
+
+
+
+        String names = nametxt.getText().toString().trim();
+        String users = usertxt.getText().toString().trim();
+        String emails = emailtxt.getText().toString().trim();
+        String passwords = passtxt.getText().toString().trim();
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user");
+
+        Query checkUser = reference.orderByChild("username").equalTo(users);
+        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if(snapshot.exists()){
+
+                    String passwordsFromDB = snapshot.child(users).child("passwords").getValue(String.class);
+
+                    if (passwordsFromDB.equals(users)) {
+
+                        String namesFromDB = snapshot.child(users).child("names").getValue(String.class);
+                        String emailsFromDB = snapshot.child(users).child("emails").getValue(String.class);
+                        String usersFromDB = snapshot.child(users).child("users").getValue(String.class);
+
+                       /* Intent intent = new Intent(getApplicationContext(), Profile.class);
+                        intent.putExtra("names",namesFromDB);
+                        intent.putExtra("users",usersFromDB);
+                        intent.putExtra("emails",emailsFromDB);
+                        intent.putExtra("passwords",passwordsFromDB);
+                        startActivity(intent);*/
+
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
     private void sendUserToNextActivity() {
         Intent intent = new Intent(this, Profile.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 

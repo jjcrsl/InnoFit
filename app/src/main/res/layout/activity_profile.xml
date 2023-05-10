@@ -4,230 +4,234 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="5dp"
-    tools:context=".MainActivity">
+    tools:context=".Profile">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@color/prominent2"
-        android:padding="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/prominent2"
+            android:padding="0dp">
 
-        <ImageView
-            android:id="@+id/profile_icon"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/profile_icon" />
+            <ImageView
+                android:id="@+id/profile_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/profile_icon" />
 
-        <TextView
-            android:id="@+id/fullname"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/fullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_icon"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/blinker_bold"
+                android:text="InnoFit Profile"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_below="@+id/profile_icon"
-            android:fontFamily="@font/blinker_bold"
-            android:layout_centerInParent="true"
-            android:text="InnoFit Profile"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:layout_marginTop="-70dp"
+            android:padding="20dp">
 
-    </RelativeLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/prominent"
+                app:cardElevation="10dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:layout_marginTop="-70dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background=""
+                    android:padding="5dp">
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="125dp"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/prominent"
-            app:cardElevation="10dp">
-            <RelativeLayout
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/baseline_account_balance_wallet_24" />
+
+                    <TextView
+                        android:id="@+id/session"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/blinker_semibold"
+                        android:text="$0"
+                        android:textColor="@color/white"
+                        android:textSize="35sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/session"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/blinker"
+                        android:text="Wallet"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/prominent"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background=""
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/baseline_attach_money_24" />
+
+                    <TextView
+                        android:id="@+id/session2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/blinker_semibold"
+                        android:text="$0"
+                        android:textColor="@color/white"
+                        android:textSize="35sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/session2"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/blinker"
+                        android:text="Balance"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp"
-                android:background="">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColorHint="@color/black"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/baseline_abc_24"
+                app:startIconTint="@color/prominent">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:src="@drawable/baseline_account_balance_wallet_24" />
-
-                <TextView
-                    android:id="@+id/session"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/blinker_semibold"
-                    android:text="$0"
-                    android:textColor="@color/white"
-                    android:textSize="35sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/session"
-                    android:layout_centerInParent="true"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameget"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-                    android:text="Wallet"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:hint="@string/Signup_fullname" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            </RelativeLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="125dp"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/prominent"
-            app:cardElevation="10dp">
-            <RelativeLayout
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp"
-                android:background="">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColorHint="@color/black"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/baseline_account_box_24"
+                app:startIconTint="@color/prominent">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/baseline_attach_money_24"
-                    android:layout_centerHorizontal="true"/>
-
-                <TextView
-                    android:id="@+id/session2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/blinker_semibold"
-                    android:text="$0"
-                    android:textColor="@color/white"
-                    android:textSize="35sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userget"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-                    android:text="Balance"
-                    android:textColor="@color/white"
-                    android:layout_below="@+id/session2"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="18sp" />
+                    android:hint="@string/Signup_username" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            </RelativeLayout>
-        </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColorHint="@color/black"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/baseline_email_24"
+                app:startIconTint="@color/prominent">
 
-    </LinearLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailget"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/blinker"
+                    android:hint="@string/Signup_email" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:orientation="vertical">
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:textColorHint="@color/black"
-            app:boxStrokeWidthFocused="2dp"
-            android:layout_marginTop="8dp"
-            app:startIconDrawable="@drawable/baseline_abc_24"
-            app:startIconTint="@color/prominent"
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nameget"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/blinker"
-                android:hint="@string/Signup_fullname" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginTop="8dp"
+                android:inputType="textPassword"
+                android:textColorHint="@color/black"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/prominent"
+                app:startIconDrawable="@drawable/baseline_password_24"
+                app:startIconTint="@color/prominent"
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:textColorHint="@color/black"
-            app:boxStrokeWidthFocused="2dp"
-            android:layout_marginTop="8dp"
-            app:startIconDrawable="@drawable/baseline_account_box_24"
-            app:startIconTint="@color/prominent"
-            >
+                >
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/userget"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passget"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/blinker"
+                    android:hint="@string/Signup_password" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+
+                android:id="@+id/signup_btn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/blinker"
-                android:hint="@string/Signup_username" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@color/prominent"
+                android:fontFamily="@font/blinker_semibold"
+                android:text="@string/Signup_signup"
+                android:textColor="@color/white" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:textColorHint="@color/black"
-            app:boxStrokeWidthFocused="2dp"
-            android:layout_marginTop="8dp"
-            app:startIconDrawable="@drawable/baseline_email_24"
-            app:startIconTint="@color/prominent"
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailget"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/blinker"
-                android:hint="@string/Signup_email" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:textColorHint="@color/black"
-            app:boxStrokeWidthFocused="2dp"
-            app:startIconDrawable="@drawable/baseline_password_24"
-            app:startIconTint="@color/prominent"
-            app:endIconTint="@color/prominent"
-            android:layout_marginTop="8dp"
-            app:endIconMode="password_toggle"
-            android:inputType="textPassword"
-
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passget"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/blinker"
-                android:hint="@string/Signup_password" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-
-            android:id="@+id/signup_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:background="@color/prominent"
-            android:fontFamily="@font/blinker_semibold"
-            android:text="@string/Signup_signup"
-            android:textColor="@color/white" />
-
-    </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

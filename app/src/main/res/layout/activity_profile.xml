@@ -26,7 +26,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/profile_icon" />
+                android:src="@drawable/profile_icon"/>
 
             <TextView
                 android:id="@+id/fullname"
@@ -262,7 +262,7 @@
             android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@color/prominent"
-            app:srcCompat="@drawable/baseline_fitness_center_24" />
+            app:srcCompat="@drawable/baseline_fitness_center_24"/>
 
         <ImageButton
             android:id="@+id/transac"
@@ -270,7 +270,7 @@
             android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@color/prominent"
-            app:srcCompat="@drawable/baseline_person_search_24" />
+            app:srcCompat="@drawable/baseline_person_search_24"/>
 
         <ImageButton
             android:id="@+id/others"
@@ -278,7 +278,7 @@
             android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@color/prominent"
-            app:srcCompat="@drawable/baseline_info_24" />
+            app:srcCompat="@drawable/baseline_info_24"/>
 
     </LinearLayout>
 

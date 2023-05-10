@@ -52,6 +52,7 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Authentication();
+                rdatabase();
                 }
         });
 
@@ -66,21 +67,9 @@ public class Signup extends AppCompatActivity {
 
     }
 
-
-    public void gotoLogin(){
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
-    }
-
-    public void Authentication(){
+    private void rdatabase() {
         rootNode = FirebaseDatabase.getInstance();
         reference = rootNode.getReference("users");
-
-        String email= emailtxt.getText().toString();
-        String password= passtxt.getText().toString();
-        String conpassword= cpasstxt.getText().toString();
-        String name= nametxt.getText().toString();
-        String user= usertxt.getText().toString();
 
         //get all the values
 
@@ -92,6 +81,23 @@ public class Signup extends AppCompatActivity {
         UsersHelperClass helperClass= new UsersHelperClass(names, users, emails, passwords);
 
         reference.child(names).setValue(helperClass);
+    }
+
+
+    public void gotoLogin(){
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
+
+    public void Authentication(){
+
+        String email= emailtxt.getText().toString();
+        String password= passtxt.getText().toString();
+        String conpassword= cpasstxt.getText().toString();
+        String name= nametxt.getText().toString();
+        String user= usertxt.getText().toString();
+
+
 
         if (!email.matches(emailPattern)){
             emailtxt.setError("Enter a proper Email Address");

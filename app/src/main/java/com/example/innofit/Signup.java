@@ -14,10 +14,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Signup extends AppCompatActivity {
      private Button button, signup;
@@ -26,6 +29,9 @@ public class Signup extends AppCompatActivity {
      ProgressDialog progressDialog;
      FirebaseAuth mAuth;
      FirebaseUser mUser;
+     
+     FirebaseDatabase rootNode;
+     DatabaseReference reference;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +52,7 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Authentication();
-            }
+                }
         });
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -59,12 +65,16 @@ public class Signup extends AppCompatActivity {
         });
 
     }
+
+
     public void gotoLogin(){
         Intent intent = new Intent(this, Login.class);
         startActivity(intent);
     }
 
     public void Authentication(){
+        rootNode = FirebaseDatabase.getInstance();
+        reference = rootNode.getReference("users");
 
         String email= emailtxt.getText().toString();
         String password= passtxt.getText().toString();
@@ -72,6 +82,16 @@ public class Signup extends AppCompatActivity {
         String name= nametxt.getText().toString();
         String user= usertxt.getText().toString();
 
+        //get all the values
+
+        String names = nametxt.getText().toString();
+        String users = usertxt.getText().toString();
+        String emails = emailtxt.getText().toString();
+        String passwords = passtxt.getText().toString();
+
+        UsersHelperClass helperClass= new UsersHelperClass(names, users, emails, passwords);
+
+        reference.child(names).setValue(helperClass);
 
         if (!email.matches(emailPattern)){
             emailtxt.setError("Enter a proper Email Address");
@@ -94,6 +114,8 @@ public class Signup extends AppCompatActivity {
                 progressDialog.setTitle("Sign up");
                 progressDialog.setCanceledOnTouchOutside(false);
                 progressDialog.show();
+
+
 
                 mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override

@@ -37,19 +37,10 @@
             android:name=".Gallery"
             android:exported="false" />
         <activity
-            android:name=".Home"
-            android:exported="false" />
-        <activity
             android:name=".Signup"
             android:exported="false" />
         <activity
-            android:name=".signup"
-            android:exported="false" />
-        <activity
             android:name=".Login"
-            android:exported="false" />
-        <activity
-            android:name=".login"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

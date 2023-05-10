@@ -22,7 +22,7 @@ public class Gallery extends AppCompatActivity {
             }
 
             private void trans(View view) {
-                Intent intent = new Intent(Gallery.this, Home.class);
+                Intent intent = new Intent(Gallery.this, Profile.class);
                 startActivity(intent);
             }
         });

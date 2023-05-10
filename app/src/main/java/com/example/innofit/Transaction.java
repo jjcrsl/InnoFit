@@ -67,7 +67,7 @@ public class Transaction extends AppCompatActivity {
             }
 
             private void trans(View view) {
-                Intent intent = new Intent(Transaction.this, Home.class);
+                Intent intent = new Intent(Transaction.this, Profile.class);
                 startActivity(intent);
             }
         });

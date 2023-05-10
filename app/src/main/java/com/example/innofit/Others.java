@@ -22,7 +22,7 @@ public class Others extends AppCompatActivity {
             }
 
             private void trans(View view) {
-                Intent intent = new Intent(Others.this, Home.class);
+                Intent intent = new Intent(Others.this, Profile.class);
                 startActivity(intent);
             }
         });

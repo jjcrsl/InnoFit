@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="30dp"
         android:layout_gravity="center">
@@ -36,7 +36,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_marginTop="50dp">
 
@@ -131,7 +131,6 @@
                 app:startIconTint="@color/prominent"
                 app:endIconTint="@color/prominent"
                 android:layout_marginTop="5dp"
-                app:endIconMode="password_toggle"
                 android:inputType="textPassword"
 
                 >
@@ -141,7 +140,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-                    android:hint="@string/Signup_password" />
+                    android:hint="@string/Signup_cpassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button

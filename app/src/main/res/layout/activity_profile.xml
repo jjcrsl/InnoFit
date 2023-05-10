@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile"
-    android:orientation="vertical">
+    android:layout_margin="5dp"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -138,6 +142,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:textColorHint="@color/black"
             app:boxStrokeWidthFocused="2dp"
+            android:layout_marginTop="8dp"
             app:startIconDrawable="@drawable/baseline_abc_24"
             app:startIconTint="@color/prominent"
             >
@@ -156,6 +161,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:textColorHint="@color/black"
             app:boxStrokeWidthFocused="2dp"
+            android:layout_marginTop="8dp"
             app:startIconDrawable="@drawable/baseline_account_box_24"
             app:startIconTint="@color/prominent"
             >
@@ -174,6 +180,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:textColorHint="@color/black"
             app:boxStrokeWidthFocused="2dp"
+            android:layout_marginTop="8dp"
             app:startIconDrawable="@drawable/baseline_email_24"
             app:startIconTint="@color/prominent"
             >
@@ -195,7 +202,7 @@
             app:startIconDrawable="@drawable/baseline_password_24"
             app:startIconTint="@color/prominent"
             app:endIconTint="@color/prominent"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             app:endIconMode="password_toggle"
             android:inputType="textPassword"
 
@@ -209,18 +216,25 @@
                 android:hint="@string/Signup_password" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Button
 
+            android:id="@+id/signup_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@color/prominent"
+            android:fontFamily="@font/blinker_semibold"
+            android:text="@string/Signup_signup"
+            android:textColor="@color/white" />
 
-
-
-
+    </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
         android:background="#652F2F"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -266,4 +280,4 @@
 
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

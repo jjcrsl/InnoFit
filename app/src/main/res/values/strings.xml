@@ -2,7 +2,7 @@
     <string name="app_name">Innofit</string>
 
     <!-- FOR LANDING-->
-    <string name="landing_tagline">InnoFit will help you find your instructor and help you build your physique to look aethetically pleasing.</string>
+    <string name="landing_tagline">InnoFit will help you find your instructor and help you build your physique to look aesthetically pleasing.</string>
     <string name="landing_title">InnoFit</string>
     <string name="landing_loginbtn">Login</string>
     <string name="landing_signupbtn">Signup</string>
@@ -11,6 +11,7 @@
     <!-- FOR LOGIN & SIGNUP-->
     <string name="Login_login">Login</string>
     <string name="Login_usernametxt">Enter Username</string>
+    <string name="Login_emailtxt">Enter Email</string>
     <string name="Login_passwordtxt">Enter Password</string>
     <string name="Login_forgetpassword">Forgot Password</string>
     <string name="Login_rmbrme">Remember Me</string>

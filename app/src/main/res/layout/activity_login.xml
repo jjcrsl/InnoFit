@@ -48,7 +48,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:textColorHint="@color/black"
                 app:boxStrokeWidthFocused="2dp"
-                app:startIconDrawable="@drawable/baseline_account_box_24"
+                app:startIconDrawable="@drawable/baseline_email_24"
                 app:startIconTint="@color/prominent"
                 >
 
@@ -57,8 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-
-                    android:hint="@string/Login_usernametxt" />
+                    android:hint="@string/Login_emailtxt" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout

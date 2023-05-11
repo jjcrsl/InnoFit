@@ -27,10 +27,22 @@ public class Profile extends AppCompatActivity {
         emailget =  findViewById(R.id.emailget);
         passget =  findViewById(R.id.passget);
         signout = findViewById(R.id.signout_btn);
+
+        String name= getIntent().getStringExtra("keyname");
+        String user= getIntent().getStringExtra("keyuser");
+        String email= getIntent().getStringExtra("keyemail");
+        String password= getIntent().getStringExtra("keypassword");
+
+        nameget.setText(name);
+        userget.setText(user);
+        emailget.setText(email);
+        passget.setText(password);
+
+
+
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.signOut();
                 signout_perform();
 
             }

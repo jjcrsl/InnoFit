@@ -48,12 +48,6 @@ public class Signup extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         mUser=mAuth.getCurrentUser();
 
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,8 +127,21 @@ public class Signup extends AppCompatActivity {
     }
 
     private void sendUserToNextActivity() {
+
+        String email= emailtxt.getText().toString();
+        String password= passtxt.getText().toString();
+        String name= nametxt.getText().toString();
+        String user= usertxt.getText().toString();
+
         Intent intent = new Intent(this, Login.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.putExtra("keyname", name);
+        intent.putExtra("keyuser", user);
+        intent.putExtra("keyemail", email);
+        intent.putExtra("keypassword", password);
+
+
+
         startActivity(intent);
 
     }

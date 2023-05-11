@@ -31,7 +31,7 @@
 
         <ImageView
             android:id="@+id/prog1"
-            android:layout_width="463dp"
+            android:layout_width="match_parent"
             android:layout_height="289dp"
             android:layout_marginTop="2dp"
             android:layout_gravity="center"
@@ -57,9 +57,9 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="207dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="20dp"
             android:fontFamily="@font/blinker_bold"
             android:text="Trainer: LISA"
             android:textColor="#F6F4F4"
@@ -74,10 +74,11 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="382dp"
+            android:layout_width="match_parent"
             android:layout_height="140dp"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
             android:fontFamily="@font/blinker"
             android:text="This program program is a type of strength training program that is focused on building muscle size and volume, also known as muscle hypertrophy."
             android:textColor="#F6F4F4"

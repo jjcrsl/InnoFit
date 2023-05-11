@@ -80,12 +80,8 @@ public class Signup extends AppCompatActivity {
     }
 
     public void Authentication(){
-        rootNode = FirebaseDatabase.getInstance();
-        reference = rootNode.getReference("user");
 
         //get all the values
-
-
 
         String email= emailtxt.getText().toString();
         String password= passtxt.getText().toString();
@@ -110,16 +106,6 @@ public class Signup extends AppCompatActivity {
             cpasstxt.setError("Password did not match");
         }
         else {
-
-            String names = nametxt.getText().toString();
-            String users = usertxt.getText().toString();
-            String emails = emailtxt.getText().toString();
-            String passwords = passtxt.getText().toString();
-
-            UsersHelperClass helperClass= new UsersHelperClass(names, users, emails, passwords);
-
-            reference.setValue(helperClass);
-
                 progressDialog.setMessage("Signing up");
                 progressDialog.setTitle("Sign up");
                 progressDialog.setCanceledOnTouchOutside(false);

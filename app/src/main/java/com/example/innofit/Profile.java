@@ -10,13 +10,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
 
 public class Profile extends AppCompatActivity {
     EditText nameget, userget, emailget,passget;
     Button signout;
     FirebaseAuth mAuth;
-    DatabaseReference reference;
 
 
     @Override
@@ -33,12 +31,10 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mAuth.signOut();
-                Intent intent = new Intent(Profile.this, MainActivity.class);
-                startActivity(intent);
+                signout_perform();
+
             }
         });
-
-        showAllUserData();
 
 
         ImageButton disc = (ImageButton) findViewById(R.id.discs);
@@ -80,20 +76,9 @@ public class Profile extends AppCompatActivity {
         });
     }
 
-    private void showAllUserData() {
-
-        Intent intent= getIntent();
-
-        String user_name= intent.getStringExtra("names");
-        String user_email= intent.getStringExtra("emails");
-        String user_user= intent.getStringExtra("users");
-        String user_password= intent.getStringExtra("passwords");
-
-        nameget.setText(user_name);
-        userget.setText(user_email);
-        emailget.setText(user_user);
-        passget.setText(user_password);
-
-
+    private void signout_perform() {
+        Intent intent = new Intent(Profile.this, MainActivity.class);
+        startActivity(intent);
     }
+
 }

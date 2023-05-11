@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity {
     EditText names, users, emails, passwords;
 
 
-    EditText nametxt, usertxt, emailtxt, passtxt, passwordtxt;
+    EditText emailtxt, passwordtxt;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     FirebaseAuth mAuth;
     FirebaseUser mUser;
@@ -107,62 +107,16 @@ public class Login extends AppCompatActivity {
                     else{
                         progressDialog.dismiss();
                         Toast.makeText(Login.this, ""+task.getException(), Toast.LENGTH_SHORT).show();
-                        storedatas();
+
                     }
                 }
             });
         }
     }
 
-    private void storedatas() {
-
-
-
-        String names = nametxt.getText().toString().trim();
-        String users = usertxt.getText().toString().trim();
-        String emails = emailtxt.getText().toString().trim();
-        String passwords = passtxt.getText().toString().trim();
-
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user");
-
-        Query checkUser = reference.orderByChild("username").equalTo(users);
-        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                if(snapshot.exists()){
-
-                    String passwordsFromDB = snapshot.child(users).child("passwords").getValue(String.class);
-
-                    if (passwordsFromDB.equals(users)) {
-
-                        String namesFromDB = snapshot.child(users).child("names").getValue(String.class);
-                        String emailsFromDB = snapshot.child(users).child("emails").getValue(String.class);
-                        String usersFromDB = snapshot.child(users).child("users").getValue(String.class);
-
-                       /* Intent intent = new Intent(getApplicationContext(), Profile.class);
-                        intent.putExtra("names",namesFromDB);
-                        intent.putExtra("users",usersFromDB);
-                        intent.putExtra("emails",emailsFromDB);
-                        intent.putExtra("passwords",passwordsFromDB);
-                        startActivity(intent);*/
-
-                    }
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
-
     private void sendUserToNextActivity() {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
-        storedatas();
     }
 
     public void openMain(){

@@ -57,7 +57,7 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="207dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/blinker_bold"
@@ -74,11 +74,12 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="369dp"
+            android:layout_width="match_parent"
             android:layout_height="129dp"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/blinker"
+            android:layout_marginLeft="15dp"
             android:text="This program is a type of exercise program that is focused on improving cardiovascular fitness and endurance."
             android:textColor="#F6F4F4"
             android:textColorHint="#FFFFFF"

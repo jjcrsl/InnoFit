@@ -162,6 +162,7 @@ public class Login extends AppCompatActivity {
     private void sendUserToNextActivity() {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
+        storedatas();
     }
 
     public void openMain(){

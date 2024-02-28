@@ -4,6 +4,7 @@
 
 # MEMBERS
 # Carsola, John Jerome
-# Dalida, Mark Jeevan
 # Reginaldo, Jhon Eric
 # Salido, John  Romy
+# Valdez, Cyrus Wesley
+# Yu, Anshun Jneil

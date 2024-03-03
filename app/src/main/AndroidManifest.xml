@@ -16,27 +16,6 @@
             android:name=".Profile"
             android:exported="false" />
         <activity
-            android:name=".Trainer4"
-            android:exported="false" />
-        <activity
-            android:name=".Trainer3"
-            android:exported="false" />
-        <activity
-            android:name=".Trainer2"
-            android:exported="false" />
-        <activity
-            android:name=".Trainer1"
-            android:exported="false" />
-        <activity
-            android:name=".Others"
-            android:exported="false" />
-        <activity
-            android:name=".Transaction"
-            android:exported="false" />
-        <activity
-            android:name=".Gallery"
-            android:exported="false" />
-        <activity
             android:name=".Signup"
             android:exported="false" />
         <activity
@@ -51,6 +30,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
 
         <meta-data
             android:name="preloaded_fonts"

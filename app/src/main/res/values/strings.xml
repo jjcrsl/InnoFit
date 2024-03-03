@@ -21,6 +21,8 @@
     <string name="Signup_password">Password</string>
     <string name="Signup_cpassword">Confirm Password</string>
     <string name="Signup_signup">Sign up</string>
+    <string name="Signup_Height">Height</string>
+    <string name="Signup_Weight">Weight</string>
 
 
 </resources>

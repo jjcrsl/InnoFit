@@ -26,16 +26,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
+
 public class Login extends AppCompatActivity {
     private ImageView image;
     private Button button, login;
-    EditText names, users, emails, passwords;
-
 
     EditText emailtxt, passwordtxt;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    FirebaseAuth mAuth;
-    FirebaseUser mUser;
     ProgressDialog progressDialog;
 
     @SuppressLint("MissingInflatedId")
@@ -44,14 +43,16 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
+
+        
+        //hooks
         image= (ImageView) findViewById(R.id.login_back_button);
         button= (Button) findViewById(R.id.create_btn);
         emailtxt= (EditText) findViewById(R.id.emailtxt);
         passwordtxt= (EditText) findViewById(R.id.passwordtxt);
         login= (Button) findViewById(R.id.loginbtn);
         progressDialog= new ProgressDialog(this);
-        mAuth=FirebaseAuth.getInstance();
-        mUser=mAuth.getCurrentUser();
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,34 +85,68 @@ public class Login extends AppCompatActivity {
             emailtxt.setError("Invalid Email Address");
 
         }
-        else if(password.isEmpty() || password.length()<8){
+        else if(password.isEmpty() || password.length()<3){
             passwordtxt.setError("Invalid Password");
         }
         else {
-            progressDialog.setMessage("Loging in");
-            progressDialog.setTitle("Login");
-            progressDialog.setCanceledOnTouchOutside(false);
-            progressDialog.show();
+
+            isUser();
 
 
 
-            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()){
-                        progressDialog.dismiss();
-                        sendUserToNextActivity();
-                        Toast.makeText(Login.this, "Logged In", Toast.LENGTH_SHORT).show();
 
+        }
+    }
+
+    private void isUser(){
+        String userEnteredEmail= emailtxt.getText().toString().trim();
+        String userEnteredPassword= passwordtxt.getText().toString().trim();
+
+        DatabaseReference reference= FirebaseDatabase.getInstance().getReference("users");
+        Query checkUser =  reference.orderByChild("email").equalTo(userEnteredEmail);
+
+        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+
+                    String passwordFromDB = dataSnapshot.child(userEnteredEmail).child("pass").getValue(String.class);
+
+                    if (!Objects.equals(passwordFromDB, userEnteredPassword)){
+
+                       String nameFromDB = dataSnapshot.child(userEnteredEmail).child("name").getValue(String.class);
+                        String userFromDB = dataSnapshot.child(userEnteredEmail).child("user").getValue(String.class);
+                        String emailFromDB = dataSnapshot.child(userEnteredEmail).child("email").getValue(String.class);
+                        String heightFromDB = dataSnapshot.child(userEnteredEmail).child("height").getValue(String.class);
+                        String weightFromDB = dataSnapshot.child(userEnteredEmail).child("weight").getValue(String.class);
+
+
+                        Intent intent = new Intent(getApplicationContext(), Profile.class);
+
+                        intent.putExtra("name", nameFromDB);
+                        intent.putExtra("user", userFromDB);
+                        intent.putExtra("email", emailFromDB);
+                        intent.putExtra("height", heightFromDB);
+                        intent.putExtra("weight", weightFromDB);
+
+                        startActivity(intent);
                     }
                     else{
-                        progressDialog.dismiss();
-                        Toast.makeText(Login.this, ""+task.getException(), Toast.LENGTH_SHORT).show();
-
+                        passwordtxt.setError("Wrong Password");
+                        passwordtxt.requestFocus();
                     }
                 }
-            });
-        }
+                else{
+                    emailtxt.setError("No such email exist");
+                    emailtxt.requestFocus();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     private void sendUserToNextActivity() {

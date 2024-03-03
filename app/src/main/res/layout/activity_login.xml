@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    android:padding="3dp"
+    android:orientation="vertical"
     android:transitionName="transition_login"
+    android:padding="30dp"
+    android:layout_gravity="center"
     tools:context=".Login">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="30dp"
-        android:layout_gravity="center">
-
 
         <ImageView
             android:id="@+id/login_back_button"
             android:layout_width="35dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:padding="1dp"
             android:layout_marginBottom="60dp"
             android:src="@drawable/back" />
@@ -37,14 +31,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
+            android:layout_gravity="center"
             android:layout_marginTop="50dp">
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:textColorHint="@color/black"
                 app:boxStrokeWidthFocused="2dp"
@@ -62,7 +57,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:textColorHint="@color/black"
                 app:boxStrokeWidthFocused="2dp"
@@ -139,9 +134,8 @@
                 android:onClick="callSignUpFromLogin"
                 android:text="Create Account"
                 android:textColor="@color/black" />
-        </LinearLayout>
     </LinearLayout>
 
 
 
-</ScrollView>
+</LinearLayout>

@@ -1,36 +1,27 @@
 {
   "project_info": {
-    "project_number": "734145318820",
-    "project_id": "innofit-58b51",
-    "storage_bucket": "innofit-58b51.appspot.com"
+    "project_number": "904150612710",
+    "firebase_url": "https://innofit-f8fde-default-rtdb.firebaseio.com",
+    "project_id": "innofit-f8fde",
+    "storage_bucket": "innofit-f8fde.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:734145318820:android:f956ec84a6cc4207fe7b31",
+        "mobilesdk_app_id": "1:904150612710:android:bcda8f39ca56ae3a855927",
         "android_client_info": {
           "package_name": "com.example.innofit"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "734145318820-tkh3cgphpcth2mtv33aod2mtekj80ns0.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA647gnnp6Kd7uE-9PTplQlhj97I5CqNP8"
+          "current_key": "AIzaSyBTin-OGXqxwUtXMhn-6KeBVpc1IjQQy2M"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "734145318820-tkh3cgphpcth2mtv33aod2mtekj80ns0.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

@@ -19,7 +19,7 @@
 
         <ImageView
             android:id="@+id/login_back_button"
-            android:layout_width="24dp"
+            android:layout_width="35dp"
             android:layout_height="match_parent"
             android:layout_marginBottom="50dp"
             android:padding="1dp"
@@ -94,8 +94,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/blinker"
-
                     android:hint="@string/Signup_email" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="@color/black"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/height"
+                app:startIconTint="@color/prominent"
+                android:layout_marginTop="5dp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/heighttxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/blinker"
+                    android:hint="@string/Signup_Height" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="@color/black"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/weight"
+                app:startIconTint="@color/prominent"
+                android:layout_marginTop="5dp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/weighttxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/blinker"
+                    android:hint="@string/Signup_Weight" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -155,7 +192,7 @@
                 android:textColor="@color/white" />
 
             <Button
-                android:id="@+id/loginn_btn"
+                android:id="@+id/login_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

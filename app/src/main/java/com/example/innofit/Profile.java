@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Profile extends AppCompatActivity {
-    EditText nameget, userget, emailget,passget;
+    EditText nameget, userget, emailget, passget;
     Button signout;
     FirebaseAuth mAuth;
 
@@ -22,16 +22,16 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        nameget =  findViewById(R.id.nameget);
-        userget =  findViewById(R.id.userget);
-        emailget =  findViewById(R.id.emailget);
-        passget =  findViewById(R.id.passget);
+        nameget = findViewById(R.id.nameget);
+        userget = findViewById(R.id.userget);
+        emailget = findViewById(R.id.emailget);
+        passget = findViewById(R.id.passget);
         signout = findViewById(R.id.signout_btn);
 
-        String name= getIntent().getStringExtra("keyname");
-        String user= getIntent().getStringExtra("keyuser");
-        String email= getIntent().getStringExtra("keyemail");
-        String password= getIntent().getStringExtra("keypassword");
+        String name = getIntent().getStringExtra("keyname");
+        String user = getIntent().getStringExtra("keyuser");
+        String email = getIntent().getStringExtra("keyemail");
+        String password = getIntent().getStringExtra("keypassword");
 
         nameget.setText(name);
         userget.setText(user);
@@ -40,7 +40,7 @@ public class Profile extends AppCompatActivity {
 
 
 
-        signout.setOnClickListener(new View.OnClickListener() {
+/*        signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signout_perform();
@@ -91,6 +91,7 @@ public class Profile extends AppCompatActivity {
     private void signout_perform() {
         Intent intent = new Intent(Profile.this, MainActivity.class);
         startActivity(intent);
-    }
+    }*/
 
+    }
 }

@@ -100,13 +100,11 @@ public class Login extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 if(dataSnapshot.exists()){
-                    usertxt.setError(null);
 
 
                     String passwordFromDB = dataSnapshot.child(userEnteredUser).child("pass").getValue(String.class);
 
-                    if(passwordFromDB.equals(userEnteredPassword)){
-                        usertxt.setError(null);
+                    if(userEnteredPassword.equals(passwordFromDB)){
                         Intent intent = new Intent(Login.this, Profile.class);
                         startActivity(intent);
 

@@ -92,15 +92,12 @@ public class Login extends AppCompatActivity {
 
             isUser();
 
-
-
-
         }
     }
 
     private void isUser(){
-        String userEnteredEmail= emailtxt.getText().toString().trim();
-        String userEnteredPassword= passwordtxt.getText().toString().trim();
+        final String userEnteredEmail= emailtxt.getText().toString().trim();
+        final String userEnteredPassword= passwordtxt.getText().toString().trim();
 
         DatabaseReference reference= FirebaseDatabase.getInstance().getReference("users");
         Query checkUser =  reference.orderByChild("email").equalTo(userEnteredEmail);
@@ -110,11 +107,16 @@ public class Login extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
 
+
                     String passwordFromDB = dataSnapshot.child(userEnteredEmail).child("pass").getValue(String.class);
 
                     if (!Objects.equals(passwordFromDB, userEnteredPassword)){
 
-                       String nameFromDB = dataSnapshot.child(userEnteredEmail).child("name").getValue(String.class);
+                        Intent intent = new Intent(Login.this, weight_class.class);
+                        startActivity(intent);
+
+
+ /*                     String nameFromDB = dataSnapshot.child(userEnteredEmail).child("name").getValue(String.class);
                         String userFromDB = dataSnapshot.child(userEnteredEmail).child("user").getValue(String.class);
                         String emailFromDB = dataSnapshot.child(userEnteredEmail).child("email").getValue(String.class);
                         String heightFromDB = dataSnapshot.child(userEnteredEmail).child("height").getValue(String.class);
@@ -129,7 +131,7 @@ public class Login extends AppCompatActivity {
                         intent.putExtra("height", heightFromDB);
                         intent.putExtra("weight", weightFromDB);
 
-                        startActivity(intent);
+                        startActivity(intent);*/
                     }
                     else{
                         passwordtxt.setError("Wrong Password");
@@ -148,11 +150,6 @@ public class Login extends AppCompatActivity {
             }
         });
     }
-
-    /*private void sendUserToNextActivity() {
-        Intent intent = new Intent(this, Profile.class);
-        startActivity(intent);
-    }*/
 
     public void openMain(){
         Intent intent = new Intent(this, MainActivity.class);

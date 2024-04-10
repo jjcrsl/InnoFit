@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Innofit"
         tools:targetApi="31">
         <activity
+            android:name=".weight_class"
+            android:exported="false" />
+        <activity
             android:name=".Profile"
             android:exported="false" />
         <activity
@@ -30,8 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
 
         <meta-data
             android:name="preloaded_fonts"

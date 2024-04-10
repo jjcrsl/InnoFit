@@ -121,7 +121,7 @@ public class Login extends AppCompatActivity {
                         String weightFromDB = dataSnapshot.child(userEnteredEmail).child("weight").getValue(String.class);
 
 
-                        Intent intent = new Intent(getApplicationContext(), Profile.class);
+                        Intent intent = new Intent(getApplicationContext(), Signup.class);
 
                         intent.putExtra("name", nameFromDB);
                         intent.putExtra("user", userFromDB);
@@ -149,10 +149,10 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    private void sendUserToNextActivity() {
+    /*private void sendUserToNextActivity() {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
-    }
+    }*/
 
     public void openMain(){
         Intent intent = new Intent(this, MainActivity.class);

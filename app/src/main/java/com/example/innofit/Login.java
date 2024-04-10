@@ -12,13 +12,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,10 +23,10 @@ import java.util.Objects;
 
 
 public class Login extends AppCompatActivity {
-    private ImageView image;
-    private Button button, login;
+ ImageView image;
+     Button button, login;
 
-    EditText emailtxt, passwordtxt;
+    EditText usertxt, passwordtxt;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     ProgressDialog progressDialog;
 
@@ -48,7 +41,7 @@ public class Login extends AppCompatActivity {
         //hooks
         image= (ImageView) findViewById(R.id.login_back_button);
         button= (Button) findViewById(R.id.create_btn);
-        emailtxt= (EditText) findViewById(R.id.emailtxt);
+        usertxt= (EditText) findViewById(R.id.usertxt);
         passwordtxt= (EditText) findViewById(R.id.passwordtxt);
         login= (Button) findViewById(R.id.loginbtn);
         progressDialog= new ProgressDialog(this);
@@ -78,11 +71,11 @@ public class Login extends AppCompatActivity {
     }
 
     private void PerformLogin() {
-        String email= emailtxt.getText().toString();
+        String user= usertxt.getText().toString();
         String password= passwordtxt.getText().toString();
 
-        if (!email.matches(emailPattern)){
-            emailtxt.setError("Invalid Email Address");
+        if (user.length()<3){
+            usertxt.setError("Invalid User");
 
         }
         else if(password.isEmpty() || password.length()<3){
@@ -96,34 +89,36 @@ public class Login extends AppCompatActivity {
     }
 
     private void isUser(){
-        final String userEnteredEmail= emailtxt.getText().toString().trim();
+        final String userEnteredUser= usertxt.getText().toString().trim();
         final String userEnteredPassword= passwordtxt.getText().toString().trim();
 
         DatabaseReference reference= FirebaseDatabase.getInstance().getReference("users");
-        Query checkUser =  reference.orderByChild("email").equalTo(userEnteredEmail);
+        Query checkUser =  reference.orderByChild("user").equalTo(userEnteredUser);
 
         checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 if(dataSnapshot.exists()){
+                    usertxt.setError(null);
 
 
-                    String passwordFromDB = dataSnapshot.child(userEnteredEmail).child("pass").getValue(String.class);
+                    String passwordFromDB = dataSnapshot.child(userEnteredUser).child("pass").getValue(String.class);
 
-                    if (!Objects.equals(passwordFromDB, userEnteredPassword)){
-
-                        Intent intent = new Intent(Login.this, weight_class.class);
+                    if(passwordFromDB.equals(userEnteredPassword)){
+                        usertxt.setError(null);
+                        Intent intent = new Intent(Login.this, Profile.class);
                         startActivity(intent);
 
 
- /*                     String nameFromDB = dataSnapshot.child(userEnteredEmail).child("name").getValue(String.class);
-                        String userFromDB = dataSnapshot.child(userEnteredEmail).child("user").getValue(String.class);
-                        String emailFromDB = dataSnapshot.child(userEnteredEmail).child("email").getValue(String.class);
-                        String heightFromDB = dataSnapshot.child(userEnteredEmail).child("height").getValue(String.class);
-                        String weightFromDB = dataSnapshot.child(userEnteredEmail).child("weight").getValue(String.class);
+/*                      String nameFromDB = dataSnapshot.child(userEnteredUser).child("name").getValue(String.class);
+                        String userFromDB = dataSnapshot.child(userEnteredUser).child("user").getValue(String.class);
+                        String emailFromDB = dataSnapshot.child(userEnteredUser).child("email").getValue(String.class);
+                        String heightFromDB = dataSnapshot.child(userEnteredUser).child("height").getValue(String.class);
+                        String weightFromDB = dataSnapshot.child(userEnteredUser).child("weight").getValue(String.class);
 
 
-                        Intent intent = new Intent(getApplicationContext(), Signup.class);
+                        Intent intent = new Intent(getApplicationContext(), Profile.class);
 
                         intent.putExtra("name", nameFromDB);
                         intent.putExtra("user", userFromDB);
@@ -139,8 +134,8 @@ public class Login extends AppCompatActivity {
                     }
                 }
                 else{
-                    emailtxt.setError("No such email exist");
-                    emailtxt.requestFocus();
+                    usertxt.setError("No such user exist");
+                    usertxt.requestFocus();
                 }
             }
 

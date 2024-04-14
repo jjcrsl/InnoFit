@@ -23,6 +23,10 @@
     <string name="Signup_signup">Sign up</string>
     <string name="Signup_Height">Height</string>
     <string name="Signup_Weight">Weight</string>
+    <string name="intensity_level">Intensity Level</string>
+    <string name="low">Low</string>
+    <string name="moderate">Moderate</string>
+    <string name="vigorous">Vigorous</string>
 
 
 </resources>

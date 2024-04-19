@@ -36,7 +36,7 @@ public class Signup extends AppCompatActivity {
         //hooks for sign_up
         image= findViewById(R.id.signup_back_button);
         signup = (Button) findViewById(R.id.signup_btn);
-        login = (Button) findViewById(R.id.login_btn);
+        login = (Button) findViewById(R.id.easy_btn);
         nametxt = (EditText) findViewById(R.id.nametxt);
         usertxt = (EditText) findViewById(R.id.usertxt);
         emailtxt = (EditText) findViewById(R.id.emailtxt);

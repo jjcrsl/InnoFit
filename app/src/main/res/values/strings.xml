@@ -27,6 +27,13 @@
     <string name="low">Low</string>
     <string name="moderate">Moderate</string>
     <string name="vigorous">Vigorous</string>
+    <string name="push_ups">Push Ups</string>
+    <string name="x8">x8</string>
+    <string name="next">Next</string>
+    <string name="x18">x18</string>
+    <string name="mountain_climber">Mountain Climber</string>
+    <string name="finish">Finish</string>
+    <string name="squats">Squats</string>
 
 
 </resources>

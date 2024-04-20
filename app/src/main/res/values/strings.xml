@@ -35,5 +35,15 @@
     <string name="finish">Finish</string>
     <string name="squats">Squats</string>
 
+    <!-- Progress Tracker & Create Task-->
+    <string name="task_description">Task Description :</string>
+    <string name="task_title">Title</string>
+    <string name="task_name">Task Name :</string>
+    <string name="create_task">Create Task</string>
+    <string name="task_cancel">Cancel</string>
+    <string name="task_confirm">Confirm</string>
+    <string name="to_do_list">To Do List</string>
+    <string name="progress_tracker">PROGRESS TRACKER</string>
+
 
 </resources>

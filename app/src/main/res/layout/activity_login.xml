@@ -43,7 +43,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:textColorHint="@color/black"
                 app:boxStrokeWidthFocused="2dp"
-                app:startIconDrawable="@drawable/baseline_email_24"
+                app:startIconDrawable="@drawable/baseline_account_box_24"
                 app:startIconTint="@color/prominent"
                 >
 

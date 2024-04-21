@@ -78,7 +78,7 @@ public class Login extends AppCompatActivity {
             usertxt.setError("Invalid User");
 
         }
-        else if(password.isEmpty() || password.length()<3){
+        else if(password.isEmpty()){
             passwordtxt.setError("Invalid Password");
         }
         else {

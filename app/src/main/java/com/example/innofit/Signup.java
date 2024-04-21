@@ -20,7 +20,7 @@ public class Signup extends AppCompatActivity {
 
      Button login, signup;
      private ImageView image;
-     EditText nametxt, usertxt, emailtxt, passtxt, heighttxt, weighttxt;
+     EditText nametxt, musertxt, emailtxt, passtxt, heighttxt, weighttxt;
      String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
 
@@ -38,7 +38,7 @@ public class Signup extends AppCompatActivity {
         signup = (Button) findViewById(R.id.signup_btn);
         login = (Button) findViewById(R.id.easy_btn);
         nametxt = (EditText) findViewById(R.id.nametxt);
-        usertxt = (EditText) findViewById(R.id.usertxt);
+        musertxt = (EditText) findViewById(R.id.musertxt);
         emailtxt = (EditText) findViewById(R.id.emailtxt);
         heighttxt = (EditText) findViewById(R.id.heighttxt);
         weighttxt = (EditText) findViewById(R.id.weighttxt);
@@ -65,7 +65,7 @@ public class Signup extends AppCompatActivity {
 
                 //get all the values
                 String name= nametxt.getText().toString();
-                String user= usertxt.getText().toString();
+                String muser= musertxt.getText().toString();
                 String email= emailtxt.getText().toString();
                 String height= heighttxt.getText().toString();
                 String weight= weighttxt.getText().toString();
@@ -73,8 +73,8 @@ public class Signup extends AppCompatActivity {
 
 
 
-                userHelperClass helperClass= new userHelperClass(name, user, email, height, weight, pass);
-                reference.child(name).setValue(helperClass);
+                userHelperClass helperClass= new userHelperClass(name, muser, email, height, weight, pass);
+                reference.child(muser).setValue(helperClass);
 
                 Toast.makeText(Signup.this, "Account Created", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Signup.this, Login.class);

@@ -78,7 +78,7 @@ public class Login extends AppCompatActivity {
             usertxt.setError("Invalid User");
 
         }
-        else if(password.isEmpty()){
+        else if(password.isEmpty() || password.length()<3){
             passwordtxt.setError("Invalid Password");
         }
         else {
@@ -93,7 +93,7 @@ public class Login extends AppCompatActivity {
         final String userEnteredPassword= passwordtxt.getText().toString().trim();
 
         DatabaseReference reference= FirebaseDatabase.getInstance().getReference("users");
-        Query checkUser =  reference.orderByChild("user").equalTo(userEnteredUser);
+        Query checkUser =  reference.orderByChild("muser").equalTo(userEnteredUser);
 
         checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -106,9 +106,8 @@ public class Login extends AppCompatActivity {
 
                     if(userEnteredPassword.equals(passwordFromDB)){
 
-
-                       String nameFromDB = dataSnapshot.child(userEnteredUser).child("name").getValue(String.class);
-                        String userFromDB = dataSnapshot.child(userEnteredUser).child("user").getValue(String.class);
+                        String userFromDB = dataSnapshot.child(userEnteredUser).child("muser").getValue(String.class);
+                        String nameFromDB = dataSnapshot.child(userEnteredUser).child("name").getValue(String.class);
                         String emailFromDB = dataSnapshot.child(userEnteredUser).child("email").getValue(String.class);
                         String heightFromDB = dataSnapshot.child(userEnteredUser).child("height").getValue(String.class);
                         String weightFromDB = dataSnapshot.child(userEnteredUser).child("weight").getValue(String.class);
@@ -116,8 +115,8 @@ public class Login extends AppCompatActivity {
 
                         Intent intent = new Intent(getApplicationContext(), Profile.class);
 
+                        intent.putExtra("muser", userFromDB);
                         intent.putExtra("name", nameFromDB);
-                        intent.putExtra("user", userFromDB);
                         intent.putExtra("email", emailFromDB);
                         intent.putExtra("height", heightFromDB);
                         intent.putExtra("weight", weightFromDB);

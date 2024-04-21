@@ -105,11 +105,9 @@ public class Login extends AppCompatActivity {
                     String passwordFromDB = dataSnapshot.child(userEnteredUser).child("pass").getValue(String.class);
 
                     if(userEnteredPassword.equals(passwordFromDB)){
-                        Intent intent = new Intent(Login.this, Profile.class);
-                        startActivity(intent);
 
 
-/*                      String nameFromDB = dataSnapshot.child(userEnteredUser).child("name").getValue(String.class);
+                       String nameFromDB = dataSnapshot.child(userEnteredUser).child("name").getValue(String.class);
                         String userFromDB = dataSnapshot.child(userEnteredUser).child("user").getValue(String.class);
                         String emailFromDB = dataSnapshot.child(userEnteredUser).child("email").getValue(String.class);
                         String heightFromDB = dataSnapshot.child(userEnteredUser).child("height").getValue(String.class);
@@ -124,7 +122,7 @@ public class Login extends AppCompatActivity {
                         intent.putExtra("height", heightFromDB);
                         intent.putExtra("weight", weightFromDB);
 
-                        startActivity(intent);*/
+                        startActivity(intent);
                     }
                     else{
                         passwordtxt.setError("Wrong Password");

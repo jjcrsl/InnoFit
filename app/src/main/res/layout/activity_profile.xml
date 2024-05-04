@@ -198,51 +198,54 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:layout_height="94dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal"
                 android:layout_margin="8pt"
                 android:background="@drawable/rectanglebg"
-                android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_gravity="center_horizontal">
+                android:orientation="horizontal">
 
                 <ImageButton
+                    android:id="@+id/dashboard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5pt"
                     android:layout_marginRight="10pt"
-                    android:background="@drawable/dashboard"/>
+                    android:background="@drawable/dashboard" />
+
                 <ImageButton
+                    android:id="@+id/todolist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12pt"
                     android:layout_marginRight="12pt"
-                    android:background="@drawable/todolist"/>
+                    android:background="@drawable/todolist" />
+
                 <ImageButton
+                    android:id="@+id/workout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12pt"
                     android:layout_marginRight="12pt"
-                    android:background="@drawable/workout"/>
+                    android:background="@drawable/workout" />
+
                 <ImageButton
+                    android:id="@+id/users"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10pt"
                     android:layout_marginRight="5pt"
-                    android:background="@drawable/users"/>
-
-
-
+                    android:background="@drawable/users" />
 
 
             </LinearLayout>
-
         </LinearLayout>
 
     </LinearLayout>

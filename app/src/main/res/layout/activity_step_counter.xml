@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wall"
+    android:background="@drawable/wallpaper"
     tools:context=".MainActivity">
 
     <TextView
@@ -10,7 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Number of Steps"
-        android:textSize="24sp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
@@ -19,24 +21,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Steps: 0"
-        android:textSize="24sp"
+        android:textSize="36sp"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="70dp"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="297dp"
-        android:layout_height="280dp"
+        android:layout_width="wrap_content"
+        android:layout_height="246dp"
         android:layout_above="@+id/linearLayout2"
         android:layout_below="@id/steps"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="67dp"
         android:layout_marginTop="37dp"
-        android:layout_marginBottom="191dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="244dp"
         android:indeterminate="false"
         android:max="10000"
         android:progressDrawable="@drawable/circular" />
+
+    <pl.droidsonroids.gif.GifImageButton
+        android:layout_width="221dp"
+        android:layout_height="225dp"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/running" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -46,7 +60,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="8pt"
         android:layout_marginTop="8pt"
-        android:layout_marginBottom="-11dp"
+        android:layout_marginBottom="-13dp"
         android:background="@drawable/rectanglebg"
         android:gravity="center"
         android:orientation="horizontal">

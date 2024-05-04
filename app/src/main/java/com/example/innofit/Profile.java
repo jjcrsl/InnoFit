@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Profile extends AppCompatActivity {
     TextView nameGet, heightGet, weightGet, stepsGet;
+    ImageButton dashboard, todolist, workout, users;
     Button signout;
 
 
@@ -21,6 +22,20 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        dashboard = (ImageButton) findViewById(R.id.dashboard);
+        dashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                trans (view);
+            }
+
+            private void trans(View view) {
+                Intent intent = new Intent(Profile.this, StepCounter.class);
+                startActivity(intent);
+            }
+        });
+
 
         nameGet = findViewById(R.id.name);
         heightGet = findViewById(R.id.height);
@@ -31,6 +46,7 @@ public class Profile extends AppCompatActivity {
 
         showAllUserData();
     }
+
 
     private void showAllUserData(){
         Intent intent = getIntent();

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FFFFFF"
->
+    >
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -30,6 +30,7 @@
             android:layout_marginEnd="5pt"
             android:layout_weight="1"
             android:background="@drawable/note_tracker" />
+
     </RelativeLayout>
 
 
@@ -46,112 +47,47 @@
             android:orientation="horizontal">
 
 
-
         </LinearLayout>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="40pt"
-                android:layout_marginTop="5pt"
-                android:layout_marginStart="8pt"
-                android:layout_marginEnd="5pt"
-                android:layout_weight="1"
-                android:background="@drawable/note_tracker"
-
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="40pt"
-                android:layout_marginTop="5pt"
-                android:layout_marginStart="8pt"
-                android:layout_marginEnd="5pt"
-                android:layout_weight="1"
-                android:background="@drawable/note_tracker" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="40pt"
-                android:layout_marginTop="5pt"
-                android:layout_marginStart="8pt"
-                android:layout_marginEnd="5pt"
-                android:layout_weight="1"
-                android:background="@drawable/note_tracker" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="40pt"
-                android:layout_marginStart="8pt"
-                android:layout_marginTop="5pt"
-                android:layout_marginEnd="5pt"
-                android:layout_weight="1"
-                android:background="@drawable/note_tracker" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0pt"
-                android:layout_height="40pt"
-                android:layout_marginTop="5pt"
-                android:layout_marginStart="8pt"
-                android:layout_marginEnd="5pt"
-                android:layout_weight="1"
-                android:background="@drawable/note_tracker" />
-
-        </LinearLayout>
 
     </LinearLayout>
 
+    <!-- Circular TextView -->
+    <TextView
+        android:id="@+id/circular_textview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/circular_background"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="#ffffff"
+        android:textSize="40sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20pt"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="16dp"
+        android:layout_margin="8pt"
         android:background="@drawable/rectanglebg"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/dashboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5pt"
-            android:layout_marginEnd="10pt"
+            android:layout_marginLeft="5pt"
+            android:layout_marginRight="10pt"
             android:background="@drawable/dashboard" />
 
         <ImageButton
+            android:id="@+id/todolist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12pt"
@@ -159,17 +95,21 @@
             android:background="@drawable/todolist" />
 
         <ImageButton
+            android:id="@+id/nutrition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12pt"
             android:layout_marginRight="12pt"
-            android:background="@drawable/workout" />
+            android:background="@drawable/nutrition" />
 
         <ImageButton
+            android:id="@+id/users"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10pt"
-            android:layout_marginEnd="5pt"
+            android:layout_marginLeft="10pt"
+            android:layout_marginRight="5pt"
             android:background="@drawable/users" />
+
+
     </LinearLayout>
 </LinearLayout>

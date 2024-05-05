@@ -50,6 +50,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/task_title_edittext"
                 android:hint="@string/task_title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:layout_marginLeft="5pt"
@@ -78,7 +79,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="80pt"
-                android:hint="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac diam nec sem gravida aliquam vel vitae turpis. Nullam volutpat sollicitudin nisi, vel consequat risus pretium vel. Aliquam erat volutpat. Sed porttitor, purus eu faucibus varius, quam est congue ex, nec malesuada nunc metus nec ligula. Pellentesque non nisl mauris. "
+                android:id="@+id/task_desc_edittext"
+                android:hint="Description"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:layout_marginLeft="5pt"
                 android:layout_marginRight="5pt"

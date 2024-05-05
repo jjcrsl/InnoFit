@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Profile extends AppCompatActivity {
     TextView nameGet, heightGet, weightGet, stepsGet;
-    ImageButton dashboard, todolist, workout, users;
+    ImageButton dashboard, todolist, nutrition, users;
     Button signout;
 
 
@@ -24,17 +24,54 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         dashboard = (ImageButton) findViewById(R.id.dashboard);
+        todolist = (ImageButton) findViewById(R.id.todolist);
+        nutrition = (ImageButton) findViewById(R.id.nutrition);
+
+
+
+        // start of intents in navbar
         dashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                trans (view);
+                openDashboard (view);
             }
 
-            private void trans(View view) {
+            private void openDashboard(View view) {
                 Intent intent = new Intent(Profile.this, StepCounter.class);
                 startActivity(intent);
             }
         });
+
+        todolist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTodolist(view);
+            }
+
+
+        private void openTodolist(View view) {
+            Intent intent = new Intent(Profile.this, ProgressTrackerActivity.class);
+            startActivity(intent);
+        }
+    });
+
+        nutrition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openNutrition(view);
+            }
+
+
+            private void openNutrition(View view) {
+                Intent intent = new Intent(Profile.this, NutritionPlan.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
 
 
         nameGet = findViewById(R.id.name);
@@ -46,6 +83,8 @@ public class Profile extends AppCompatActivity {
 
         showAllUserData();
     }
+
+
 
 
     private void showAllUserData(){

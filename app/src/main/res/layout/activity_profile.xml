@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -169,29 +169,55 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/upperBody"
                 android:layout_width="match_parent"
                 android:layout_height="60pt"
                 android:layout_marginLeft="10pt"
                 android:layout_marginTop="5pt"
                 android:layout_marginRight="10pt"
                 android:layout_marginBottom="5pt"
-                android:background="@drawable/headnav" />
+                android:background="@drawable/headnav"
+                android:drawableLeft="@drawable/upperbody"
+                android:fontFamily="@font/blinker_bold"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="Upper Body"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
 
             <TextView
+                android:id="@+id/coreBody"
                 android:layout_width="match_parent"
                 android:layout_height="60pt"
                 android:layout_marginLeft="10pt"
                 android:layout_marginRight="10pt"
                 android:layout_marginBottom="5pt"
-                android:background="@drawable/headnav"/>
+                android:background="@drawable/headnav"
+                android:drawableLeft="@drawable/corebody"
+                android:fontFamily="@font/blinker_bold"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="Core Body"
+                android:textColor="@color/white"
+                android:textSize="30sp"/>
 
             <TextView
+                android:id="@+id/lowerBody"
                 android:layout_width="match_parent"
                 android:layout_height="60pt"
                 android:layout_marginLeft="10pt"
                 android:layout_marginRight="10pt"
                 android:layout_marginBottom="5pt"
-                android:background="@drawable/headnav"/>
+                android:background="@drawable/headnav"
+                android:drawableLeft="@drawable/lowerbody"
+                android:fontFamily="@font/blinker_bold"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="Lower Body"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:clickable="true"
+                android:focusable="true" />
 
 
         </LinearLayout>
@@ -229,12 +255,12 @@
                     android:background="@drawable/todolist" />
 
                 <ImageButton
-                    android:id="@+id/workout"
+                    android:id="@+id/nutrition"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12pt"
                     android:layout_marginRight="12pt"
-                    android:background="@drawable/workout" />
+                    android:background="@drawable/nutrition" />
 
                 <ImageButton
                     android:id="@+id/users"
@@ -251,4 +277,4 @@
     </LinearLayout>
 
 
-</LinearLayout>
+</ScrollView>

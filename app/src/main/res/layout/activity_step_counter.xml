@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaper"
+    android:background="@drawable/walllast"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:text="Number of Steps"
         android:textSize="40sp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif"
+
+        android:fontFamily="@font/blinker_semibold"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
@@ -21,22 +21,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Steps: 0"
-        android:textSize="36sp"
+        android:textSize="50sp"
+        android:fontFamily="@font/blinker_semibold"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"/>
+        android:layout_marginTop="90dp"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
-        android:layout_height="246dp"
+        android:layout_height="165dp"
         android:layout_above="@+id/linearLayout2"
         android:layout_below="@id/steps"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="67dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="19dp"
         android:layout_marginEnd="54dp"
         android:layout_marginBottom="244dp"
         android:indeterminate="false"
@@ -49,7 +50,7 @@
         android:layout_above="@+id/linearLayout2"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="94dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="7dp"
         android:src="@drawable/running" />
 
     <LinearLayout
@@ -66,6 +67,7 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/dashboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5pt"
@@ -73,6 +75,7 @@
             android:background="@drawable/dashboard" />
 
         <ImageButton
+            android:id="@+id/todolist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12pt"
@@ -80,6 +83,7 @@
             android:background="@drawable/todolist" />
 
         <ImageButton
+            android:id="@+id/nutrition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12pt"
@@ -87,6 +91,7 @@
             android:background="@drawable/workout" />
 
         <ImageButton
+            android:id="@+id/users"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10pt"

@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Profile extends AppCompatActivity {
-    TextView nameGet, heightGet, weightGet, stepsGet;
+    TextView nameGet, heightGet, weightGet, stepsGet, steps;
     ImageButton dashboard, todolist, nutrition, users;
     Button signout;
 
@@ -26,10 +26,24 @@ public class Profile extends AppCompatActivity {
         dashboard = (ImageButton) findViewById(R.id.dashboard);
         todolist = (ImageButton) findViewById(R.id.todolist);
         nutrition = (ImageButton) findViewById(R.id.nutrition);
+        steps = (TextView) findViewById(R.id.steps);
+
 
 
 
         // start of intents in navbar
+
+
+        steps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Profile.this, StepCounter.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         dashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +51,7 @@ public class Profile extends AppCompatActivity {
             }
 
             private void openDashboard(View view) {
-                Intent intent = new Intent(Profile.this, StepCounter.class);
+                Intent intent = new Intent(Profile.this, Profile.class);
                 startActivity(intent);
             }
         });

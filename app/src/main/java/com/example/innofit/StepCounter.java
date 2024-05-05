@@ -1,12 +1,15 @@
 package com.example.innofit;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -15,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
 
 public class StepCounter extends AppCompatActivity implements SensorEventListener {
+    ImageButton dashboard, todolist, nutrition, users;
 
     private SensorManager sensorManager;
     private TextView steps;
@@ -29,6 +33,10 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step_counter);
 
+        dashboard = (ImageButton) findViewById(R.id.dashboard);
+        todolist = (ImageButton) findViewById(R.id.todolist);
+        nutrition = (ImageButton) findViewById(R.id.nutrition);
+
         steps = findViewById(R.id.steps);
         progressBar = findViewById(R.id.progressBar);
 
@@ -38,7 +46,54 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
         totalSteps = sharedPreferences.getInt("totalSteps", 0) - previousTotalSteps;
         steps.setText(String.valueOf(totalSteps));
         progressBar.setProgress(totalSteps);
+
+        dashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDashboard (view);
+            }
+
+            private void openDashboard(View view) {
+                Intent intent = new Intent(StepCounter.this, Profile.class);
+                startActivity(intent);
+            }
+        });
+
+        todolist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTodolist(view);
+            }
+
+
+            private void openTodolist(View view) {
+                Intent intent = new Intent(StepCounter.this, ProgressTrackerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        nutrition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openNutrition(view);
+            }
+
+
+            private void openNutrition(View view) {
+                Intent intent = new Intent(StepCounter.this, NutritionPlan.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
+
+
+
+
+
 
     @Override
     protected void onResume() {

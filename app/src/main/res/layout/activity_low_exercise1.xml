@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center">
 
@@ -38,28 +38,28 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="233dp"
+                android:layout_gravity="center"
                 android:layout_marginBottom="50dp"
-                android:src="@drawable/pushup"
-                android:layout_gravity="center"/>
+                android:src="@drawable/pushup" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/workouts2"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="PUSH UPS"
                 android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/blinker_bold"
-                android:textSize="50dp"
+                android:padding="10dp"
+                android:text="PUSH UPS"
                 android:textColor="@color/white"
-                android:padding="10dp"/>
+                android:textSize="50dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -68,38 +68,38 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/blinker_semibold"
                 android:padding="10dp"
-                android:text="15X and 3 Repitition"
+                android:text="15X and 3 Sets"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_height="64dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20pt"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/rectanglebg">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:paddingRight="3pt"
+                    android:gravity="start"
                     android:orientation="vertical"
-                    android:gravity="start">
+                    android:paddingRight="3pt">
+
                     <ImageView
                         android:id="@+id/backBtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:gravity="center"
-                        android:textSize="14pt"
-                        android:src="@drawable/right"
-                        android:scaleX="-1"
                         android:background="@drawable/workouts3"
-                        android:clickable="true"/>
-
-
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:scaleX="-1"
+                        android:src="@drawable/right"
+                        android:textSize="14pt" />
 
 
                 </LinearLayout>
@@ -108,21 +108,20 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:paddingLeft="3pt"
+                    android:gravity="end"
                     android:orientation="vertical"
-                    android:gravity="end">
+                    android:paddingLeft="3pt">
 
                     <ImageView
                         android:id="@+id/nextBtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:gravity="center"
-                        android:textSize="14pt"
-                        android:src="@drawable/right"
+                        android:background="@drawable/workouts3"
                         android:clickable="true"
-                        android:background="@drawable/workouts3"/>
-
+                        android:gravity="center"
+                        android:src="@drawable/right"
+                        android:textSize="14pt" />
 
 
                 </LinearLayout>
@@ -131,7 +130,6 @@
             </LinearLayout>
 
 
-
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

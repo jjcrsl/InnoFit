@@ -15,7 +15,7 @@
             android:id="@+id/imageView8"
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:background="#00F44336"
             android:fontFamily="@font/blinker_extrabold"
-            android:text="Nutrition Plan"
+            android:text="Overweight Nutrition Plan"
             android:textColor="@color/white"
             android:textSize="34sp"
             android:textStyle="bold"
@@ -39,10 +39,11 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Eat well and feel great with this nutrition plan"
+            android:layout_width="380dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="25dp"
+            android:text="A healthy eating plan gives your body the nutrients it needs every day while staying within your daily calorie goal for weight loss."
+            android:textAlignment="center"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,26 +64,68 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="383dp"
-            android:layout_height="210dp"
-            android:layout_marginTop="8dp"
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="86dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/blinker_bold"
+            android:text="Breakfast"
+            android:textColor="#000000"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:srcCompat="@drawable/rectanglebg" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="383dp"
             android:layout_height="210dp"
-            android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:srcCompat="@drawable/rectanglebg" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Bread, Banana, Milk and Eggs"
+            android:textColor="#FFFCFC"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.104"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="178dp"
+            android:layout_height="133dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/owbf" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="170dp"
+            android:layout_height="115dp"
+            android:text="-2 eggs, \n-2 slices whole wheat bread \n-1sp margarine \n-Milk 3/4 C low-fat"
+            android:textColor="#FDFDFD"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.642" />
 
         <TextView
             android:id="@+id/textView5"
@@ -97,96 +140,59 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="94dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/blinker_bold"
-            android:text="Breakfast"
-            android:textColor="#000000"
-            android:textSize="20sp"
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="383dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="178dp"
-            android:layout_height="133dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView5"
-            app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintHorizontal_bias="0.054"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.495"
-            app:srcCompat="@drawable/spinachomellete" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Spinach and Onion Omelet"
-            android:textColor="#FFFCFC"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/imageView4"
-            app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintHorizontal_bias="0.061"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="186dp"
-            android:layout_height="111dp"
-            android:text="-3 large eggs, 2 cups spinach, 1 cup onion, \n-Olive oil cooking spray, Salt and pepper.
-            \n-1medium orange \n24 P / 15 F / 31 C / 8 Fiber"
-            android:textColor="#FDFDFD"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-            app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintHorizontal_bias="0.444"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="180dp"
-            android:layout_height="149dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView1"
-            app:layout_constraintStart_toStartOf="@+id/imageView1"
-            app:srcCompat="@drawable/honeysalmon" />
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:srcCompat="@drawable/rectanglebg" />
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Honey Garlic Salmon"
+            android:layout_width="193dp"
+            android:layout_height="23dp"
+            android:text="Chinese noodle and beef salad"
             android:textColor="#FFFAFA"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintHorizontal_bias="0.096"
             app:layout_constraintStart_toStartOf="@+id/imageView1"
             app:layout_constraintTop_toTopOf="@+id/imageView1"
-            app:layout_constraintVertical_bias="0.857" />
+            app:layout_constraintVertical_bias="0.68" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="176dp"
+            android:layout_height="149dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView1"
+            app:layout_constraintStart_toStartOf="@+id/imageView1"
+            app:srcCompat="@drawable/owl" />
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="189dp"
-            android:layout_height="147dp"
-            android:text="-3.5 oz. salmon, 10 brown rice crackers. \n-Blueberry Protein Smoothie  \n-1/2 cup frozen blueberries \n-1.5 scoops vanilla protein powder, 1/2-1 cup water. \n55 P / 12 F / 28 C / 5 Fiber"
+            android:layout_width="173dp"
+            android:layout_height="125dp"
+            android:text="-Beef roast	3 oz
+            \n-Peanut oil	1½ tsp
+            \n-Soy sauce low-sodium1 tsp
+            \n-Carrots	½ C
+            \n-Chinese noodles,	¼ C
+            \n-Tea, unsweetened	1 C"
             android:textColor="#F1F1F1"
             app:layout_constraintBottom_toBottomOf="@+id/imageView1"
             app:layout_constraintEnd_toEndOf="@+id/imageView1"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
             app:layout_constraintTop_toTopOf="@+id/imageView1"
-            app:layout_constraintVertical_bias="0.492" />
+            app:layout_constraintVertical_bias="0.576" />
 
         <TextView
             android:id="@+id/textView7"
@@ -214,65 +220,75 @@
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/rectanglebg" />
 
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Pork stir-fry with vegetables"
+            android:textColor="#FFFAFA"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintHorizontal_bias="0.112"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="145dp"
-            android:layout_height="136dp"
+            android:layout_width="164dp"
+            android:layout_height="138dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toBottomOf="@+id/textView14"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/chickenalfredo" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Chicken Alfredo"
-            android:textColor="#FFFAFA"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="0.121"
-            app:layout_constraintStart_toStartOf="@+id/imageView6"
-            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+            app:srcCompat="@drawable/owd" />
 
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="180dp"
-            android:layout_height="133dp"
-            android:text="-16oz chicken \n-1 large Banana \n-Although chicken alfredo is high in sodium, it is low in trans fats and has no added sugars \n45 P / 21 F / 46.8 C / 14.4 Fiber"
+            android:layout_width="175dp"
+            android:layout_height="126dp"
+            android:text="-Pork cutlet	2 oz
+            \n-Peanut oil 1 tsp
+            \n-Soy sauce low-sodium 1tsp
+            \n-Broccoli	½ C
+            \n-Carrots 1 C
+            \n-Steamed brown rice 1 C
+            \n-Tea, unsweetened	1 C"
             android:textColor="#F1F1F1"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="0.372"
+            app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="@+id/imageView6"
-            app:layout_constraintVertical_bias="0.694" />
+            app:layout_constraintVertical_bias="0.595" />
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="390dp"
-            android:layout_height="58dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="24dp"
-            android:text="A healthy eating plan gives your body the nutrients it needs every day while staying within your daily calorie goal for weight loss. A healthy eating plan also will lower your risk for heart disease and other health conditions."
+            android:fontFamily="@font/blinker"
+            android:gravity="center"
+            android:text="Calories:1,609\n\nTotal Carb, % kcals:56\nTotal Fat, % kcals:27\nSodium,* mg:1,296\nCholesterol, mg:148\nProtein, % kcals:20"
+            android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
+
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/blinker_bold"
-            android:text="A healthy eating plan:"
+            android:text="Healthy Eating Tips:"
             android:textColor="#000000"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -282,10 +298,14 @@
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="384dp"
-            android:layout_height="38dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="- Emphasizes vegetables, fruits, whole grains, and fat-free or low-fat dairy products"
+            android:text=" To lose weight, most people need to reduce the number of calories they get from food and beverages (energy IN) and increase their physical activity (energy OUT).
+            \n\n Eating plans that contain 1,200–1,500 calories each day will help most women lose weight safely.
+            \n\n Eating plans that contain 1,500–1,800 calories each day are suitable for men and for women who weigh more or who exercise regularly. "
+            android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -294,42 +314,19 @@
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="384dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="- Includes lean meats, poultry, fish, beans, eggs, and nuts"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="384dp"
-            android:layout_height="41dp"
-            android:layout_marginTop="12dp"
-            android:text="- Limits saturated and trans fats, sodium, and added sugars and controls portion sizes"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.357"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="25pt"
+            android:layout_marginTop="60px"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/rectanglebg"
             android:gravity="center"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="1228dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10">
 
             <ImageButton
                 android:id="@+id/dashboard"
@@ -367,7 +364,4 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </ScrollView>
-

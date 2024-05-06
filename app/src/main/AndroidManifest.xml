@@ -15,6 +15,18 @@
         android:theme="@style/Theme.Innofit"
         tools:targetApi="31">
         <activity
+            android:name=".NutritionPlan3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".NutritionPlan2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".NutritionStartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NutritionPlan"
+            android:exported="false" />
+        <activity
             android:name=".StepCounter"
             android:exported="false" />
         <activity
@@ -74,8 +86,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

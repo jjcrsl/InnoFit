@@ -7,11 +7,6 @@
     tools:context=".low_exercise1">
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -38,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="282dp"
             android:orientation="vertical"
-            android:layout_marginBottom="200dp">
+            android:layout_marginBottom="20dp">
 
 
             <pl.droidsonroids.gif.GifImageButton
@@ -66,7 +61,7 @@
                 android:padding="10dp"
                 android:text="Mountain Climber"
                 android:textColor="@color/white"
-                android:textSize="50sp"
+                android:textSize="45sp"
                 />
 
             <TextView
@@ -140,5 +135,4 @@
 
         </LinearLayout>
         </LinearLayout>
-    </ScrollView>
 </LinearLayout>

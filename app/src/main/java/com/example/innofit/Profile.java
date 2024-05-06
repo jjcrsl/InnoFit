@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Profile extends AppCompatActivity {
-    TextView nameGet, heightGet, weightGet, coreExercise, upperExercise, lowerExercise, stepsGet;
+    public TextView nameGet, heightGet, weightGet, coreExercise, upperExercise, lowerExercise, stepsGet;
     ImageButton dashboard, todolist, nutrition, users;
     Button signout;
 
@@ -31,6 +31,9 @@ public class Profile extends AppCompatActivity {
         upperExercise = (TextView) findViewById(R.id.upperBody);
         lowerExercise = (TextView) findViewById(R.id.lowerBody);
         stepsGet = (TextView) findViewById(R.id.steps);
+
+
+
 
 
 
@@ -98,9 +101,7 @@ public class Profile extends AppCompatActivity {
         coreExercise = findViewById(R.id.coreBody);
         upperExercise = findViewById(R.id.upperBody);
         lowerExercise = findViewById(R.id.lowerBody);
-/*        signout = findViewById(R.id.signout_btn);*/
 
-        //show all the data
 
         showAllUserData();
 
@@ -146,14 +147,16 @@ public class Profile extends AppCompatActivity {
 
 
 
-    private void showAllUserData(){
+    public void showAllUserData(){
         Intent intent = getIntent();
         String user_name = intent.getStringExtra("name");
-        String user_height = intent.getStringExtra("height");
+        String user_height = intent.getStringExtra("height" );
         String user_weight = intent.getStringExtra("weight");
 
         nameGet.setText(user_name);
-        heightGet.setText(user_height);
-        weightGet.setText(user_weight);
+        heightGet.setText(user_height +" cm");
+        weightGet.setText(user_weight+" kg");
     }
+
+
 }

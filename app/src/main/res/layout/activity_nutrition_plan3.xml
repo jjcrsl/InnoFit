@@ -187,10 +187,8 @@
             android:layout_height="125dp"
             android:text="-Chicken Breast 4oz
             \n-Steamed veggies such as
-            \nBrocolli, Carrots and
-            \nBell Peppers
-            \n-Mixed green salad with olive oil and
-            \n balsamic vinegar dressing"
+            \nBrocolli and Carrots
+            \n-Mixed green salad with olive oil"
             android:textColor="#F1F1F1"
             app:layout_constraintBottom_toBottomOf="@+id/imageView1"
             app:layout_constraintEnd_toEndOf="@+id/imageView1"
@@ -258,7 +256,6 @@
             android:text="-Salmon Fillet 4oz
             \n-Sweet potato (1 medium)
             \n-Protein smoothie includes:
-            \nWhey protein powder (1 scoop),
             \nBanana, Spinach and,
             \nAlmond Milk"
             android:textColor="#F1F1F1"

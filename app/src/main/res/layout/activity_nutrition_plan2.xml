@@ -14,7 +14,7 @@
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_height="81dp"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -184,7 +184,6 @@
             android:text="-Beef roast	3 oz
             \n-Peanut oil	1½ tsp
             \n-Soy sauce low-sodium1 tsp
-            \n-Carrots	½ C
             \n-Chinese noodles,	¼ C
             \n-Tea, unsweetened	1 C"
             android:textColor="#F1F1F1"
@@ -252,10 +251,7 @@
             android:layout_width="175dp"
             android:layout_height="126dp"
             android:text="-Pork cutlet	2 oz
-            \n-Peanut oil 1 tsp
-            \n-Soy sauce low-sodium 1tsp
             \n-Broccoli	½ C
-            \n-Carrots 1 C
             \n-Steamed brown rice 1 C
             \n-Tea, unsweetened	1 C"
             android:textColor="#F1F1F1"

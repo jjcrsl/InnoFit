@@ -20,9 +20,7 @@ import java.util.Set;
 public class ProgressTrackerActivity extends AppCompatActivity {
 
     private TextView circularTextView;
-    private CheckBox checkBox;
     private SharedPreferences sharedPreferences;
-    ImageButton dashboard, todolist, nutrition, users;
     private Set<String> noteSet;
 
     @Override
@@ -30,52 +28,10 @@ public class ProgressTrackerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.progress_tracker);
 
-        dashboard = (ImageButton) findViewById(R.id.dashboard);
-        todolist = (ImageButton) findViewById(R.id.todolist);
-        nutrition = (ImageButton) findViewById(R.id.nutrition);
-
-
-
-        // start of intents in navbar
-        dashboard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openDashboard (view);
-            }
-
-            private void openDashboard(View view) {
-                Intent intent = new Intent(ProgressTrackerActivity.this, StepCounter.class);
-                startActivity(intent);
-            }
-        });
-
-        todolist.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openTodolist(view);
-            }
-
-
-            private void openTodolist(View view) {
-                Intent intent = new Intent(ProgressTrackerActivity.this, ProgressTrackerActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        nutrition.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openNutrition(view);
-            }
-
-
-            private void openNutrition(View view) {
-                Intent intent = new Intent(ProgressTrackerActivity.this, NutritionPlan.class);
-                startActivity(intent);
-            }
-        });
-
         circularTextView = findViewById(R.id.circular_textview);
+        ImageButton dashboard = findViewById(R.id.dashboard);
+        ImageButton todolist = findViewById(R.id.todolist);
+        ImageButton nutrition = findViewById(R.id.nutrition);
 
         sharedPreferences = getSharedPreferences("notes", MODE_PRIVATE);
         noteSet = sharedPreferences.getStringSet("notes_set", new HashSet<>());
@@ -100,25 +56,54 @@ public class ProgressTrackerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProgressTrackerActivity.this, AddTaskActivity.class);
-                launcher.launch(intent);
+                launcher.launch(intent); // Launch the activity and handle the result
             }
         });
 
-        circularTextView.setOnLongClickListener(new View.OnLongClickListener() {
+        dashboard.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View v) {
-                checkBox.setVisibility(View.VISIBLE);
-                return true;
+            public void onClick(View view) {
+                openDashboard();
             }
         });
 
-        noteSet.clear();
+        todolist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTodolist();
+            }
+        });
 
+        nutrition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openNutrition();
+            }
+        });
+
+        // Load existing notes if available
         if (!noteSet.isEmpty()) {
             for (String note : noteSet) {
                 addNewTextView(note);
             }
         }
+    }
+
+    private void openDashboard() {
+        Intent intent = new Intent(this, Profile.class);
+        startActivity(intent);
+    }
+
+    private void openTodolist() {
+        Intent intent = new Intent(this, ProgressTrackerActivity.class);
+        intent.putExtra("clearNotes", true); // Indicate to clear notes
+        startActivity(intent);
+        finish(); // Finish the current activity to prevent creating a new instance
+    }
+
+    private void openNutrition() {
+        Intent intent = new Intent(this, NutritionStartActivity.class);
+        startActivity(intent);
     }
 
     private void addNewTextView(String note) {
@@ -143,6 +128,8 @@ public class ProgressTrackerActivity extends AppCompatActivity {
             newTextView.setPadding(16, 16, 16, 16);
             newTextView.setText(note);
 
+            newTextView.setTextSize(20);
+
             newTextView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
@@ -166,5 +153,10 @@ public class ProgressTrackerActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putStringSet("notes_set", noteSet);
         editor.apply();
+    }
+
+    private void clearNotes() {
+        noteSet.clear();
+        saveNotes();
     }
 }

@@ -39,6 +39,32 @@ public class NutritionStartActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Overweight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                openOverweight (view);
+            }
+
+            private void openOverweight(View view) {
+                Intent intent = new Intent(NutritionStartActivity.this, NutritionPlan2Activity.class);
+                startActivity(intent);
+            }
+        });
+        Underweight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                openUnderweight (view);
+            }
+
+            private void openUnderweight(View view) {
+                Intent intent = new Intent(NutritionStartActivity.this, NutritionPlan3Activity.class);
+                startActivity(intent);
+            }
+        });
+
+
         // start of intents in navbar
         dashboard.setOnClickListener(new View.OnClickListener() {
             @Override

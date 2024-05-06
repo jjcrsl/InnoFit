@@ -18,6 +18,36 @@
             android:name=".StepCounter"
             android:exported="false" />
         <activity
+            android:name=".Core_exercise1"
+            android:exported="false" />
+        <activity
+            android:name=".Core_exercise2"
+            android:exported="false" />
+        <activity
+            android:name=".Core_exercise3"
+            android:exported="false" />
+        <activity
+            android:name=".core_exercise4"
+            android:exported="false" />
+        <activity
+            android:name=".Core_exercise5"
+            android:exported="false" />
+        <activity
+            android:name=".Lower_exercise1"
+            android:exported="false" />
+        <activity
+            android:name=".Lower_exercise2"
+            android:exported="false" />
+        <activity
+            android:name=".lower_exercise3"
+            android:exported="false" />
+        <activity
+            android:name=".lower_exercise4"
+            android:exported="false" />
+        <activity
+            android:name=".Lower_exercise5"
+            android:exported="false" />
+        <activity
             android:name=".low_exercise1"
             android:exported="false" />
         <activity
@@ -28,9 +58,6 @@
             android:exported="false" />
         <activity
             android:name=".ProgressTrackerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".weight_class"
             android:exported="false" />
         <activity
             android:name=".Profile"

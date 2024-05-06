@@ -23,9 +23,14 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+
         dashboard = (ImageButton) findViewById(R.id.dashboard);
         todolist = (ImageButton) findViewById(R.id.todolist);
         nutrition = (ImageButton) findViewById(R.id.nutrition);
+        coreExercise = (TextView) findViewById(R.id.coreBody);
+        upperExercise = (TextView) findViewById(R.id.upperBody);
+        lowerExercise = (TextView) findViewById(R.id.lowerBody);
+        stepsGet = (TextView) findViewById(R.id.steps);
 
 
 
@@ -63,7 +68,19 @@ public class Profile extends AppCompatActivity {
 
 
             private void openNutrition(View view) {
-                Intent intent = new Intent(Profile.this, NutritionPlan.class);
+                Intent intent = new Intent(Profile.this, NutritionStartActivity.class);
+                startActivity(intent);
+            }
+        });
+        stepsGet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openNutrition(view);
+            }
+
+
+            private void openNutrition(View view) {
+                Intent intent = new Intent(Profile.this,StepCounter.class);
                 startActivity(intent);
             }
         });

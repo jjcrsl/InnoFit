@@ -34,7 +34,7 @@ public class NutritionPlan extends AppCompatActivity {
         }
 
         private void openDashboard(View view) {
-            Intent intent = new Intent(NutritionPlan.this, StepCounter.class);
+            Intent intent = new Intent(NutritionPlan.this, Profile.class);
             startActivity(intent);
         }
     });
@@ -60,7 +60,7 @@ public class NutritionPlan extends AppCompatActivity {
 
 
         private void openNutrition(View view) {
-            Intent intent = new Intent(NutritionPlan.this, NutritionPlan.class);
+            Intent intent = new Intent(NutritionPlan.this, NutritionStartActivity.class);
             startActivity(intent);
         }
     });

@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Profile extends AppCompatActivity {
-    TextView nameGet, heightGet, weightGet, coreExercise, stepsGet;
+    TextView nameGet, heightGet, weightGet, coreExercise, upperExercise, lowerExercise, stepsGet;
     ImageButton dashboard, todolist, nutrition, users;
     Button signout;
 
@@ -77,7 +77,10 @@ public class Profile extends AppCompatActivity {
         nameGet = findViewById(R.id.name);
         heightGet = findViewById(R.id.height);
         weightGet = findViewById(R.id.weight);
+
         coreExercise = findViewById(R.id.coreBody);
+        upperExercise = findViewById(R.id.upperBody);
+        lowerExercise = findViewById(R.id.lowerBody);
 /*        signout = findViewById(R.id.signout_btn);*/
 
         //show all the data
@@ -97,6 +100,29 @@ public class Profile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        upperExercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                openNextPage(view);
+            }
+            private void openNextPage(View view) {
+                Intent intent = new Intent(Profile.this, low_exercise1.class);
+                startActivity(intent);
+            }
+        });
+        lowerExercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                openNextPage(view);
+            }
+            private void openNextPage(View view) {
+                Intent intent = new Intent(Profile.this, Lower_exercise1.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 

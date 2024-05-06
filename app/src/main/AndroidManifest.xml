@@ -66,9 +66,6 @@
             android:name=".low_exercise3"
             android:exported="false" />
         <activity
-            android:name=".low_exercise2"
-            android:exported="false" />
-        <activity
             android:name=".ProgressTrackerActivity"
             android:exported="false" />
         <activity
@@ -86,6 +83,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

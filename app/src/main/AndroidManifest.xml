@@ -63,6 +63,9 @@
             android:name=".low_exercise1"
             android:exported="false" />
         <activity
+            android:name=".low_exercise2"
+            android:exported="false" />
+        <activity
             android:name=".low_exercise3"
             android:exported="false" />
         <activity

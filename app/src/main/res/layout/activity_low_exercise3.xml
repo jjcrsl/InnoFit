@@ -38,8 +38,8 @@
 
 
             <pl.droidsonroids.gif.GifImageButton
-                android:layout_width="205dp"
-                android:layout_height="264dp"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="50dp"
                 android:src="@drawable/burpees" />

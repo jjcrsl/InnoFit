@@ -45,7 +45,7 @@ public class Profile extends AppCompatActivity {
             }
 
             private void openDashboard(View view) {
-                Intent intent = new Intent(Profile.this, Profile.class);
+                Intent intent = new Intent(Profile.this, StepCounter.class);
                 startActivity(intent);
             }
         });

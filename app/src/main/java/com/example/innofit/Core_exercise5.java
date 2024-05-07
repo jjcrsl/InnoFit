@@ -34,6 +34,7 @@ public class Core_exercise5 extends AppCompatActivity {
             private void openNextPage(View view) {
                 Intent intent = new Intent(Core_exercise5.this, Profile.class);
                 startActivity(intent);
+
             }
         });
 
